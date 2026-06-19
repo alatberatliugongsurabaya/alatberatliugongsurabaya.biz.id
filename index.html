@@ -34,7 +34,7 @@
     body { font-family: 'Inter', sans-serif; background: #ffffff; color: var(--dark); overflow-x: hidden; display: flex; flex-direction: column; min-height: 100vh; }
     .container { width: 100%; max-width: 1300px; margin: 0 auto; padding: 0 24px; }
 
-    /* ── POPUP PROMO ── */
+    /* ── POPUP PROMO DEALER ALAT BERAT SURABAYA ── */
     #promoPopup { position: fixed; bottom: 30px; left: 30px; background: white; width: 320px; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); border-top: 5px solid var(--lg-orange); z-index: 10000; padding: 20px; animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
     @keyframes slideUp { from { transform: translateY(100px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
     .promo-close { position: absolute; top: 10px; right: 10px; background: none; border: none; font-size: 20px; cursor: pointer; color: var(--muted); }
@@ -42,11 +42,11 @@
     .promo-desc { font-size: 14px; color: var(--dark); line-height: 1.5; margin-bottom: 15px;}
     .promo-btn { display: block; text-align: center; background: var(--green); color: white; padding: 10px; border-radius: 6px; font-weight: 700; text-decoration: none;}
 
-    /* ── LINK BISA DI KLIK (HOVER EFFECT) ── */
+    /* ── EFEK HOVER TAUTAN KONTAK ALAT BERAT LIUGONG SURABAYA ── */
     .contact-link { color: inherit; text-decoration: none; transition: color 0.2s ease-in-out; cursor: pointer; }
     .contact-link:hover { color: var(--lg-orange) !important; }
 
-    /* ── NAVBAR & MEGA MENU ── */
+    /* ── NAVIGASI UTAMA & MEGA MENU DEALER LIUGONG SURABAYA ── */
     #navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 9999; background: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); display: flex; justify-content: space-between; align-items: stretch; height: 80px; transition: all 0.3s ease; }
     .nav-brand { display: flex; align-items: center; padding-left: 30px; text-decoration: none; cursor: pointer; gap: 12px; }
     .nav-brand img { height: 36px; object-fit: contain; }
@@ -68,13 +68,13 @@
     .nav-wa-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 24px; background: var(--green); border-radius: 50px; text-decoration: none; border: none; color: white !important; font-family: inherit; font-weight: 700 !important; font-size: 15px !important; transition: opacity 0.2s, transform 0.2s !important; margin-right: 15px; }
     .nav-wa-btn:hover { opacity: 0.90; transform: translateY(-2px); }
 
-    /* Hamburger menu selalu muncul (Desktop & Mobile) */
+    /* MENU HAMBURGER RESPONSIVE ALAT BERAT SURABAYA */
     .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 10px; background: none; border: none; }
     .hamburger span { display: block; width: 26px; height: 3px; background: var(--lg-navy); border-radius: 2px; transition: all 0.3s; }
     
     @media (max-width: 1024px) { .nav-links { display: none; } }
 
-    /* MOBILE SIDEBAR */
+    /* SIDEBAR MOBILE KATALOG ALAT BERAT LIUGONG */
     .mobile-sidebar-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 99998; opacity: 0; visibility: hidden; transition: 0.3s; }
     .mobile-sidebar-overlay.active { opacity: 1; visibility: visible; }
     .mobile-sidebar { position: fixed; top: 0; right: -300px; width: 280px; height: 100vh; background: white; z-index: 99999; box-shadow: -5px 0 20px rgba(0,0,0,0.1); transition: 0.3s ease-out; display: flex; flex-direction: column; padding: 24px; overflow-y: auto;}
@@ -83,17 +83,17 @@
     .mobile-sidebar a { display: block; font-size: 16px; font-weight: 700; color: var(--dark); text-decoration: none; padding: 14px 0; border-bottom: 1px solid var(--border); }
     .mobile-sidebar a:hover { color: var(--lg-orange); }
 
-    /* ── SPA PAGE LOGIC ── */
+    /* ── ROUTING SPA WEBSITE ALAT BERAT SURABAYA ── */
     .page-view { display: none; padding-top: 80px; flex-grow: 1; animation: fadeIn 0.4s ease; padding-bottom: 60px; }
     .page-view.active { display: block; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
 
-    /* ── BREADCRUMB HERO ── */
+    /* ── NAVIGASI BREADCRUMB PRODUK LIUGONG SURABAYA ── */
     .hero-breadcrumb { position: absolute; top: 20px; left: 30px; z-index: 10; font-size: 14px; color: rgba(255,255,255,0.8); font-weight: 600; display: flex; gap: 5px; }
     .hero-breadcrumb a { color: var(--lg-orange); text-decoration: none; cursor: pointer; transition: 0.2s; }
     .hero-breadcrumb a:hover { color: white; }
 
-    /* ── BANNERS & WARRANTY BOX ── */
+    /* ── BANNERS & GARANSI RESMI ALAT BERAT LIUGONG SURABAYA ── */
     .page-banner { height: 250px; background: var(--dark); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; margin-bottom: 50px;}
     .page-banner::before { content:''; position: absolute; inset:0; background-image: url('Alat Berat Surabaya.jpg'); background-size: cover; background-position: center; opacity: 0.25; }
     .page-banner h1 { position: relative; z-index: 2; color: white; font-size: 48px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; border-bottom: 4px solid var(--lg-orange); padding-bottom: 10px;}
@@ -105,7 +105,7 @@
     .warranty-box li { font-weight: 500; font-size: 15px; line-height: 1.6; color: #e0e0e0; position: relative; padding-left: 20px; }
     .warranty-box li::before { content: "•"; position: absolute; left: 0; color: var(--lg-orange); font-size: 20px; line-height: 1.4; top: 0; }
 
-    /* ========================================= VIEW 1: HOME PAGE ========================================= */
+    /* ========================================= VIEW 1: BERANDA DEALER ALAT BERAT LIUGONG SURABAYA ========================================= */
     .hero { position: relative; min-height: calc(100vh - 80px); display: flex; align-items: center; justify-content: center; background: var(--dark); overflow: hidden; }
     .hero-bg { position: absolute; inset: 0; background-image: url('Alat Berat Surabaya.jpg'); background-size: cover; background-position: center; opacity: 0.45; animation: zoomIn 15s infinite alternate ease-in-out;}
     @keyframes zoomIn { from { transform: scale(1); } to { transform: scale(1.05); } }
@@ -157,7 +157,7 @@
     .btn-maps:hover { background: #001f40; color:white; transform: translateY(-2px);}
     .dealer-btns .btn-wa-green { flex: 1; }
 
-    /* ========================================= VIEW 2: ABOUT US ========================================= */
+    /* ========================================= VIEW 2: TENTANG KAMI DEALER LIUGONG SURABAYA ========================================= */
     .about-content-section { padding: 60px 0; max-width: 1100px; margin: 0 auto; }
     .about-vid-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 80px;}
     .about-video { width: 100%; aspect-ratio: 16/9; background: #eee; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);}
@@ -173,20 +173,20 @@
     .news-card:hover .news-title { color: var(--lg-orange); }
     .news-desc { font-size: 14px; color: var(--muted); line-height: 1.6;}
 
-    /* ========================================= VIEW 3: DEALER & MAPS ========================================= */
+    /* ========================================= VIEW 3: LOKASI DEALER ALAT BERAT SURABAYA ========================================= */
     .dealer-full-section { padding: 60px 0; max-width: 1100px; margin: 0 auto; }
     .cities-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; margin-bottom: 60px; justify-content: center;}
     .city-badge { background: var(--bg-gray); border: 1px solid var(--border); padding: 10px 15px; text-align: center; font-weight: 700; color: var(--lg-navy); border-radius: 50px; font-size: 14px;}
     .city-badge.prov { background: var(--lg-navy); color: white; border-color: var(--lg-navy); }
 
-    /* ========================================= VIEW 4: CATALOG PAGE ========================================= */
+    /* ========================================= VIEW 4: KATALOG ALAT BERAT LIUGONG SURABAYA ========================================= */
     .catalog-layout { display: flex; gap: 40px; align-items: flex-start; }
     .sidebar { width: 280px; flex-shrink: 0; background: white; border: 1px solid var(--border); position: sticky; top: 100px; border-radius: 8px; overflow: hidden;}
     .filter-header { background: var(--lg-navy); color: white; font-size: 18px; font-weight: 600; padding: 18px 20px; display: flex; justify-content: space-between; align-items: center;}
     .filter-reset { background: transparent; border: 1px solid rgba(255,255,255,0.4); color: white; font-size: 12px; padding: 4px 10px; border-radius: 4px; cursor: pointer; transition: 0.2s;}
     .filter-reset:hover { background: rgba(255,255,255,0.2); }
     
-    /* Accordion Style Filter (Tertutup Default) */
+    /* Accordion Filter Alat Berat Surabaya */
     .filter-btn { width: 100%; text-align: left; background: #fff; color: var(--lg-navy); border: none; border-bottom: 1px solid var(--border); padding: 14px 20px; font-size: 15px; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background 0.2s; }
     .filter-btn:hover { background: var(--bg-gray); }
     .filter-btn svg { width: 16px; height: 16px; transition: transform 0.3s; fill: var(--lg-navy);}
@@ -212,8 +212,8 @@
     .spec-label { font-size: 11px; color: var(--muted); text-transform: uppercase; font-weight: 700; margin-bottom: 2px; }
     .spec-val { font-size: 15px; font-weight: 800; color: var(--dark); }
 
-    /* ========================================= VIEW 5: PRODUCT DETAIL PAGE ========================================= */
-    .detail-hero { background: url('hero.png') center/cover; padding: 60px 0; position: relative; color: white; margin-bottom: 40px; }
+    /* ========================================= VIEW 5: DETAIL PRODUK ALAT BERAT SURABAYA ========================================= */
+    .detail-hero { background: url('LiuGong Surabaya.jpg') center/cover; padding: 60px 0; position: relative; color: white; margin-bottom: 40px; }
     .detail-hero::before { content:''; position: absolute; inset:0; background: rgba(0,0,0,0.75); }
     .detail-hero-content { position: relative; z-index: 2; display: flex; justify-content: space-between; align-items: flex-end;}
     .detail-hero-title h1 { font-size: 54px; font-weight: 900; color: var(--lg-orange); margin: 0; line-height: 1; }
@@ -223,7 +223,7 @@
     .hl-val { font-size: 22px; font-weight: 900; color: white; }
     .hl-label { font-size: 12px; color: rgba(255,255,255,0.6); text-transform: uppercase; font-weight: 800; margin-top: 4px; }
 
-    /* Detail Slider */
+    /* Detail Slider Alat Berat Surabaya */
     .detail-slider-wrapper { max-width: 1000px; margin: 0 auto 30px; position: relative; overflow: hidden; border-radius: 12px; background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid var(--border);}
     .detail-slider-track { display: flex; transition: transform 0.5s ease-in-out; }
     .detail-slider-track img { width: 100%; flex-shrink: 0; object-fit: contain; height: 450px; background: #fff; padding: 20px;}
@@ -240,7 +240,7 @@
     .spec-list-key { color: var(--muted); font-weight: 600;}
     .spec-list-val { font-weight: 800; color: var(--dark); text-align: right; }
 
-    /* ========================================= VIEW 6: CONTACT US ========================================= */
+    /* ========================================= VIEW 6: KONTAK DEALER ALAT BERAT SURABAYA ========================================= */
     .contact-layout { display: flex; gap: 40px; max-width: 1200px; margin: -50px auto 80px; align-items: stretch; position: relative; z-index: 2;}
     .contact-form-card { flex: 1.5; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border-top: 6px solid var(--lg-navy);}
     .form-instruction { font-size: 15px; color: var(--muted); margin-bottom: 30px; line-height: 1.6;}
@@ -263,7 +263,7 @@
     .contact-map-full { width: 100%; max-width: 1200px; height: 450px; margin: 0 auto 60px; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.08); }
     .contact-map-full iframe { width: 100%; height: 100%; border: none; }
 
-    /* ── FOOTER & FLOATING WA ── */
+    /* ── FOOTER & FLOATING WA DEALER ALAT BERAT SURABAYA ── */
     footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 50px 0 30px; text-align: center; font-size: 14px; margin-top: auto;}
     .footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-bottom: 40px; text-align: left;}
     .footer-title { color: white; font-size: 16px; font-weight: 800; margin-bottom: 20px; letter-spacing: 1px;}
@@ -360,7 +360,7 @@
     <section class="about-snippet">
       <div class="container about-layout">
         <div class="about-img">
-          <img src="tentang kami.jpg" alt="Dealer LiuGong" onerror="this.src='https://via.placeholder.com/600x400/eee/999?text=Tentang+Kami'">
+          <img src="Alat Berat Surabaya.jpg" alt="Dealer LiuGong" onerror="this.src='https://via.placeholder.com/600x400/eee/999?text=Tentang+Kami'">
         </div>
         <div class="about-text">
           <div class="section-label">Tentang Kami</div>
@@ -449,7 +449,7 @@
           <p style="font-size: 16px; color: var(--muted); line-height: 1.8; margin-bottom: 20px;"><strong>LiuGong Surabaya</strong> adalah dealer resmi penyedia alat berat terbaik di Jawa Timur. Kami hadir untuk melayani penjualan excavator, wheel loader, dan berbagai macam alat berat unggulan untuk menunjang kebutuhan proyek konstruksi, pertambangan, dan agrikultur. Kami memastikan setiap unit memberikan performa maksimal untuk medan tropis dengan dukungan purna jual, garansi resmi, dan jaminan ketersediaan suku cadang.</p>
         </div>
         <div class="about-video">
-          <video src="about us.mp4" autoplay muted loop controls></video>
+          <video src="Alat Berat Surabaya.mp4" autoplay muted loop controls></video>
         </div>
       </div>
 
@@ -927,7 +927,7 @@ const products = {
     ]
   },
   "8128H": {
-    category: "Wheel Loaders", subCategory: "Large Wheel Loaders", isHot: false, img: "Wheel Loaders 8128H.png", 
+    category: "Wheel Loaders", subCategory: "Large Wheel Loaders", isHot: false, img: "Alat Berat Wheel Loaders 8128H.png", 
     desc: "The titan of our wheel loader range.",
     specs: { "OPERATING WEIGHT":"52,100 kg", "RATED POWER":"418 kW", "BUCKET CAPACITY":"7.0 m³" },
     detailedSpecs: [
@@ -939,7 +939,7 @@ const products = {
 
   // ── EXCAVATORS ──
   "906F": {
-    category: "Excavators", isHot: false, img: "906F.png", desc: "Compact excavator for versatile tasks.",
+    category: "Excavators", isHot: false, img: "Alat Berat Excavator 906F.png", desc: "Compact excavator for versatile tasks.",
     specs: { "OPERATING WEIGHT":"5,600 kg", "RATED POWER":"35.9 kW", "BUCKET CAPACITY":"0.09-0.32 m³" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "5,600 kg", "Rated Power": "35.9 kW (48 hp/49 ps) @ 2000 rpm", "Bucket Capacity": "0.21 m³" } },
@@ -950,7 +950,7 @@ const products = {
     ]
   },
   "908E": {
-    category: "Excavators", isHot: false, img: "908E.png", desc: "High performance compact excavator.",
+    category: "Excavators", isHot: false, img: "Alat Berat Excavator 908F.png", desc: "High performance compact excavator.",
     specs: { "OPERATING WEIGHT":"7,500 kg", "RATED POWER":"46.3 kW", "BUCKET CAPACITY":"0.32 m³" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "7,500 kg", "Rated Power": "46.3 kW (62 hp / 63 ps) @ 2,200 rpm", "Bucket Capacity": "0.32 m³" } },
@@ -961,7 +961,7 @@ const products = {
     ]
   },
   "W915E": {
-    category: "Excavators", isHot: false, img: "W915E.png", desc: "Wheeled excavator.",
+    category: "Excavators", isHot: false, img: "Alat Berat Excavator W915E.png", desc: "Wheeled excavator.",
     specs: { "OPERATING WEIGHT":"14,600 kg", "RATED POWER":"97 kW" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "14,600 kg", "Rated Power": "97 kW (130 hp / 132 ps) @ 2,200 rpm" } },
@@ -971,7 +971,7 @@ const products = {
     ]
   },
   "920EES": {
-    category: "Excavators", isHot: true, img: "920EES.png", desc: "Reliable medium excavator.",
+    category: "Excavators", isHot: true, img: "Alat Berat Excavator 920EES.png", desc: "Reliable medium excavator.",
     specs: { "OPERATING WEIGHT":"20,500 kg", "RATED POWER":"124 kW", "BUCKET CAPACITY":"0.93 m³" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "20,500 kg", "Rated Power": "124 kW (166 hp / 169 ps) @ 2,050 rpm", "Bucket Capacity": "0.93 m³" } },
@@ -982,7 +982,7 @@ const products = {
     ]
   },
   "920E": {
-    category: "Excavators", isHot: false, img: "920E.png", desc: "Advanced medium excavator.",
+    category: "Excavators", isHot: false, img: "Alat Berat Excavator 920E.png", desc: "Advanced medium excavator.",
     specs: { "OPERATING WEIGHT":"21,500 kg", "RATED POWER":"112 kW", "BUCKET CAPACITY":"1.0 m³" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "21,500 kg", "Rated Power": "112 kW (150 hp / 152 ps) @ 1,950 rpm", "Bucket Capacity": "1.0 m³" } },
@@ -993,7 +993,7 @@ const products = {
     ]
   },
 "922E": {
-    category: "Excavators", isHot: false, img: "922E.png", desc: "Advanced medium excavator.",
+    category: "Excavators", isHot: false, img: "Alat Berat Excavator 922E.png", desc: "Advanced medium excavator.",
     specs: { "OPERATING WEIGHT":"22,000 kg", "RATED POWER":"124 kW", "BUCKET CAPACITY":"1.1 cbm" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "22,000 kg", "Bucket Capacity": "1.1 cbm", "Rated Power": "124 kW (169 hp) @ 2,050 rpm" } },
@@ -1001,7 +1001,7 @@ const products = {
     ]
   },
   "922E-Long Arm": {
-    category: "Excavators", isHot: false, img: "922E-Long Arm.png", desc: "Long arm medium excavator.",
+    category: "Excavators", isHot: false, img: "Alat Berat Excavator 922E-Long Arm.png", desc: "Long arm medium excavator.",
     specs: { "OPERATING WEIGHT":"22,500 kg", "RATED POWER":"112 kW", "BUCKET CAPACITY":"0.45 cbm" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "22,500 kg", "Bucket Capacity": "0.45 cbm", "Rated Power": "112 kW (152 hp) @ 1,950 rpm" } },
@@ -1009,7 +1009,7 @@ const products = {
     ]
   },
   "933E": {
-    category: "Excavators", isHot: false, img: "933E.png", desc: "Heavy excavator.",
+    category: "Excavators", isHot: false, img: "Alat Berat Excavator 933E.png", desc: "Heavy excavator.",
     specs: { "OPERATING WEIGHT":"33,000 kg", "RATED POWER":"169 kW", "BUCKET CAPACITY":"2.0 cbm" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "33,000 kg", "Bucket Capacity": "2.0 cbm", "Rated Power": "169 kW (230 hp) @ 2,050 rpm" } },
@@ -1017,7 +1017,7 @@ const products = {
     ]
   },
   "922FE": {
-    category: "Excavators", isHot: true, img: "922FE.png", desc: "Electric medium excavator.",
+    category: "Excavators", isHot: true, img: "Alat Berat Excavator 922FE.png", desc: "Electric medium excavator.",
     specs: { "OPERATING WEIGHT":"24,100 kg", "RATED POWER":"165 kW", "BUCKET CAPACITY":"1.0 m³" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "24,100 kg", "Rated Power": "165 kW", "Bucket Capacity": "1.0 m³" } },
@@ -1026,7 +1026,7 @@ const products = {
     ]
   },
   "938EHD": {
-    category: "Excavators", isHot: false, img: "938EHD.png", desc: "Heavy duty excavator.",
+    category: "Excavators", isHot: false, img: "Alat Berat Excavator 938EHD.png", desc: "Heavy duty excavator.",
     specs: { "OPERATING WEIGHT":"38,400 kg", "RATED POWER":"214 kW", "BUCKET CAPACITY":"1.9 m³" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "38,400 kg", "Rated Power": "214 kW @ 2100 rpm", "Bucket Capacity": "1.9 m³" } },
@@ -1037,7 +1037,7 @@ const products = {
     ]
   },
   "952EHD": {
-    category: "Excavators", isHot: true, img: "952EHD.png", desc: "Extra heavy duty excavator.",
+    category: "Excavators", isHot: true, img: "Alat Berat Excavator 952EHD.png", desc: "Extra heavy duty excavator.",
     specs: { "OPERATING WEIGHT":"50,000 kg", "RATED POWER":"280 kW", "BUCKET CAPACITY":"3.2 m³" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "50,000 kg", "Rated Power": "280 kW @ 2,000 rpm", "Bucket Capacity": "3.2 m³" } },
@@ -1048,7 +1048,7 @@ const products = {
     ]
   },
   "952F": {
-    category: "Excavators", isHot: false, img: "952F.jpg", desc: "High production excavator.",
+    category: "Excavators", isHot: false, img: "Alat Berat Excavator 952F.jpg", desc: "High production excavator.",
     specs: { "OPERATING WEIGHT":"51,000 kg", "RATED POWER":"298 kW", "BUCKET CAPACITY":"2.6-3.2 m³" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "51,000 kg", "Rated Power": "298 kW @ 2000 rpm", "Bucket Capacity": "2.6-3.2 m³" } },
@@ -1059,7 +1059,7 @@ const products = {
     ]
   },
   "975EHD": {
-    category: "Excavators", isHot: false, img: "975EHD.png", desc: "Massive excavation capability.",
+    category: "Excavators", isHot: false, img: "Alat Berat Excavator 975EHD.png", desc: "Massive excavation capability.",
     specs: { "OPERATING WEIGHT":"75,000 kg", "RATED POWER":"391 kW", "BUCKET CAPACITY":"5.0 m³" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "75,000 kg", "Rated Power": "391 kW @ 1800 rpm", "Bucket Capacity": "5.0 m³" } },
@@ -1069,14 +1069,14 @@ const products = {
     ]
   },
   "975F": {
-    category: "Excavators", isHot: false, img: "975F.png", desc: "Flexible massive excavator.",
+    category: "Excavators", isHot: false, img: "Alat Berat Excavator 975F.png", desc: "Flexible massive excavator.",
     specs: { "OPERATING WEIGHT":"75,000-78,500 kg", "RATED POWER":"391/563 kW", "BUCKET CAPACITY":"5.0/5.6 m³" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "78,500 kg", "Rated Power": "563 kW" } }
     ]
   },
   "985F": {
-    category: "Excavators", isHot: false, img: "985F.png", desc: "Mining class excavator.",
+    category: "Excavators", isHot: false, img: "Alat Berat Excavator 985F.png", desc: "Mining class excavator.",
     specs: { "OPERATING WEIGHT":"82,000 kg", "RATED POWER":"563 kW", "BUCKET CAPACITY":"6.0 m³" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "82,000 kg", "Rated Power": "563 kW @ 2,100 rpm", "Bucket Capacity": "6.0 m³" } },
@@ -1086,7 +1086,7 @@ const products = {
     ]
   },
   "9125F": {
-    category: "Excavators", isHot: false, img: "9125F.png", desc: "The largest excavator for heavy mining.",
+    category: "Excavators", isHot: false, img: "Alat Berat Excavator 9125F.png", desc: "The largest excavator for heavy mining.",
     specs: { "OPERATING WEIGHT":"122,000 kg", "RATED POWER":"567 kW", "BUCKET CAPACITY":"7.0-9.0 m³" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "122,000 kg", "Rated Power": "567 kW @ 1,800 rpm", "Std. Bucket capacity": "8.0 m³" } },
@@ -1099,7 +1099,7 @@ const products = {
 
   // ── BULLDOZERS ──
   "B160C": {
-    category: "Bulldozers", isHot: false, img: "B160C.png", desc: "Efficient bulldozer for standard jobs.",
+    category: "Bulldozers", isHot: false, img: "Alat Berat Bulldozers B160C.png", desc: "Efficient bulldozer for standard jobs.",
     specs: { "OPERATING WEIGHT":"17,000 kg", "ENGINE POWER":"131 kW", "BLADE CAPACITY":"4.5 m³" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "17,000 kg", "Engine Power": "131 kW (176 hp) @ 1,850 rpm", "Blade Capacity": "4.5 m³", "Blade Type": "Straight" } },
@@ -1108,7 +1108,7 @@ const products = {
     ]
   },
   "B160CL": {
-    category: "Bulldozers", isHot: false, img: "B160CL.png", desc: "Bulldozer with wider track shoe.",
+    category: "Bulldozers", isHot: false, img: "Alat Berat Bulldozers B160CL.png", desc: "Bulldozer with wider track shoe.",
     specs: { "OPERATING WEIGHT":"18,500 kg", "ENGINE POWER":"131 kW", "DOZING CAPACITY":"5.5 cbm" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "18.5 t", "Engine Power": "131 kW (176 hp) @ 1,850 rpm", "Dozing Capacity": "5.5 cbm", "Blade Type": "straight-tilt" } },
@@ -1117,7 +1117,7 @@ const products = {
     ]
   },
   "B230": {
-    category: "Bulldozers", isHot: true, img: "B230.png", desc: "Heavy duty bulldozer.",
+    category: "Bulldozers", isHot: true, img: "Alat Berat Bulldozers B230.png", desc: "Heavy duty bulldozer.",
     specs: { "OPERATING WEIGHT":"24,500 kg", "ENGINE POWER":"179 kW", "BLADE CAPACITY":"7.8 m³" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "24,500 kg", "Engine Power": "179 kW (240 hp) @ 2,000 rpm", "Blade Capacity": "7.8 m³", "Blade Type": "Straight" } },
@@ -1126,7 +1126,7 @@ const products = {
     ]
   },
   "LD20D": {
-    category: "Bulldozers", isHot: false, img: "LD20D.png", desc: "Powerful earthmoving bulldozer.",
+    category: "Bulldozers", isHot: false, img: "Alat Berat Bulldozers LD20D.png", desc: "Powerful earthmoving bulldozer.",
     specs: { "OPERATING WEIGHT":"17,500 kg", "ENGINE POWER":"154 kW", "BLADE CAPACITY":"4.5 m³" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "17,500 kg", "Engine Power": "154 kW" } },
@@ -1135,7 +1135,7 @@ const products = {
     ]
   },
 "LD20DL": {
-    category: "Bulldozers", isHot: false, img: "LD20DL.png", desc: "Powerful earthmoving bulldozer.",
+    category: "Bulldozers", isHot: false, img: "Alat Berat Bulldozers LD20DL.png", desc: "Powerful earthmoving bulldozer.",
     specs: { "OPERATING WEIGHT":"20,000 kg", "ENGINE POWER":"154 kW", "DOZING CAPACITY":"6.5 cbm" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "20 ton", "Engine Power": "154 kW", "Dozing Capacity": "6.5 cbm", "Blade Type": "straight-tilt" } },
@@ -1146,7 +1146,7 @@ const products = {
   
   // ── MOTOR GRADERS ──
   "4140D": {
-    category: "Motor Graders", isHot: false, img: "4140D.png", desc: "Standard motor grader.",
+    category: "Motor Graders", isHot: false, img: "Alat Berat Motor Graders 4140D.png", desc: "Standard motor grader.",
     specs: { "OPERATING WEIGHT":"12,600 kg", "BLADE WIDTH":"3,660 mm", "MAX TRAVEL SPEED":"42 km/h" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "12,600 kg", "Blade Pull": "≥65 kN" } },
@@ -1156,7 +1156,7 @@ const products = {
     ]
   },
   "4230D": {
-    category: "Motor Graders", isHot: false, img: "4230D.png", desc: "Heavy duty grader.",
+    category: "Motor Graders", isHot: false, img: "Alat Berat Motor Graders 4230D.png", desc: "Heavy duty grader.",
     specs: { "OPERATING WEIGHT":"17,000 kg", "BLADE WIDTH":"4,270 mm", "MAX TRAVEL SPEED":"42 km/h" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "17,000 kg", "Blade Pull": "≥93 kN" } },
@@ -1166,7 +1166,7 @@ const products = {
     ]
   },
   "4230DS": {
-    category: "Motor Graders", isHot: false, img: "4230DS.png", desc: "Heavy duty grader with ripper.",
+    category: "Motor Graders", isHot: false, img: "Alat Berat Motor Graders 4230DS.png", desc: "Heavy duty grader with ripper.",
     specs: { "OPERATING WEIGHT":"17,000 kg", "BLADE WIDTH":"4,270 mm", "RATED POWER":"180 kW" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "17,000 kg", "Including": "Ripper" } },
@@ -1175,7 +1175,7 @@ const products = {
     ]
   },
   "4260D": {
-    category: "Motor Graders", isHot: false, img: "4260D.png", desc: "Advanced grader for large sites.",
+    category: "Motor Graders", isHot: false, img: "Alat Berat Motor Graders 4260D.png", desc: "Advanced grader for large sites.",
     specs: { "OPERATING WEIGHT":"20,500 kg", "BLADE WIDTH":"4,270 mm", "DRAWBAR PULL":"112 kN" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "20,500 kg", "Drawbar pull": "112 kN" } },
@@ -1184,7 +1184,7 @@ const products = {
     ]
   },
   "4280D": {
-    category: "Motor Graders", isHot: true, img: "4280D.png", desc: "Premium heavy grader.",
+    category: "Motor Graders", isHot: true, img: "Alat Berat Motor Graders 4280D.png", desc: "Premium heavy grader.",
     specs: { "OPERATING WEIGHT":"24,000 kg", "BLADE WIDTH":"4,270 mm", "DRAWBAR PULL":"123 kN" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "24,000 kg", "Drawbar pull": "123 kN" } },
@@ -1195,7 +1195,7 @@ const products = {
 
   // ── MINING TRUCK ──
   "DW90A": {
-    category: "Mining Truck", isHot: false, img: "DW90A.png", desc: "Standard mining truck.",
+    category: "Mining Truck", isHot: false, img: "Alat Berat Mining Truck DW90A.png", desc: "Standard mining truck.",
     specs: { "MAX GROSS WEIGHT":"90,000 kg", "RATED POWER":"353 kW", "HEAPED CAPACITY":"38 m³" },
     detailedSpecs: [
       { group: "Base", items: { "Maximum Operating Weight": "90,000 kg", "Truck Weight": "31,000 kg", "Rated Operation Capacity": "59,000 kg", "Rated Power": "353 kW @ 1,900 rpm" } },
@@ -1204,7 +1204,7 @@ const products = {
     ]
   },
   "DW90A AT": {
-    category: "Mining Truck", isHot: false, img: "DW90A AT.png", desc: "Automatic transmission mining truck.",
+    category: "Mining Truck", isHot: false, img: "Alat Berat Mining Truck DW90A AT.png", desc: "Automatic transmission mining truck.",
     specs: { "MAX GROSS WEIGHT":"90,000 kg", "RATED POWER":"306 kW", "HEAPED CAPACITY":"36 m³" },
     detailedSpecs: [
       { group: "Base", items: { "Max Gross Machine Weight": "90,000 kg", "Net Machine Weight": "31,000 kg", "Payload": "59,000 kg", "Rated Power": "306 kW @ 1,900 rpm" } },
@@ -1213,7 +1213,7 @@ const products = {
     ]
   },
   "DW105A": {
-    category: "Mining Truck", isHot: true, img: "DW105A.png", desc: "Heavy capacity mining truck.",
+    category: "Mining Truck", isHot: true, img: "Alat Berat Mining Truck DW105A.png", desc: "Heavy capacity mining truck.",
     specs: { "MAX GROSS WEIGHT":"106,000 kg", "RATED POWER":"382 kW", "HEAPED CAPACITY":"36 m³" },
     detailedSpecs: [
       { group: "Base", items: { "Max Gross Machine Weight": "106,000 kg", "Net Machine Weight": "36,000 kg", "Payload": "70,000 kg", "Rated Power": "382 kW @ 1,900 rpm" } },
@@ -1222,7 +1222,7 @@ const products = {
     ]
   },
   "DW 105A Electric": {
-    category: "Mining Truck", isHot: true, img: "DW 105A Electric.png", desc: "Electric mining truck.",
+    category: "Mining Truck", isHot: true, img: "Alat Berat Mining Truck DW 105A Electric.png", desc: "Electric mining truck.",
     specs: { "MAX GROSS WEIGHT":"105,000 kg", "RATED POWER":"500 kW", "HEAPED CAPACITY":"43 m³" },
     detailedSpecs: [
       { group: "Base", items: { "Max Gross Machine Weight": "105,000 kg", "Net Machine Weight": "37,000 kg", "Payload": "70,000 kg", "Rated Power": "500 kW @ 1,700 rpm" } },
@@ -1231,7 +1231,7 @@ const products = {
     ]
   },
   "DE100C": {
-    category: "Mining Truck", isHot: false, img: "DE100C.png", desc: "Ultra capacity mining truck.",
+    category: "Mining Truck", isHot: false, img: "Alat Berat Mining Truck DE100C.png", desc: "Ultra capacity mining truck.",
     specs: { "MAX GROSS WEIGHT":"72,000 kg", "RATED POWER":"940 kW", "HEAPED CAPACITY":"63 m³" },
     detailedSpecs: [
       { group: "Base", items: { "Max Gross Machine Weight": "72,000 kg", "Net Machine Weight": "169,000 kg", "Payload": "97,000 kg", "Rated Power": "940 kW" } },
@@ -1242,7 +1242,7 @@ const products = {
 
   // ── ROLLERS ──
 "6611E-cabin": {
-    category: "Rollers", isHot: false, img: "6611E-cabin.png", desc: "Vibro roller with cabin.",
+    category: "Rollers", isHot: false, img: "Alat Berat Rollers 6611E-cabin.png", desc: "Vibro roller with cabin.",
     specs: { "OPERATING WEIGHT":"11,350 kg", "VIB FREQ":"30/33 Hz", "AMPLITUDE":"2.0/1.1 mm" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "11,350 kg" } },
@@ -1251,7 +1251,7 @@ const products = {
     ]
   },
   "6611E-canopy": {
-    category: "Rollers", isHot: false, img: "6611E-canopy.png", desc: "Vibro roller with canopy.",
+    category: "Rollers", isHot: false, img: "Alat Berat Rollers 6611E-canopy.png", desc: "Vibro roller with canopy.",
     specs: { "OPERATING WEIGHT":"11,350 kg", "VIB FREQ":"30/33 Hz", "AMPLITUDE":"2.0/1.1 mm" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "11,350 kg" } },
@@ -1260,7 +1260,7 @@ const products = {
     ]
   },
   "6620E": {
-    category: "Rollers", isHot: false, img: "6620E.png", desc: "Medium roller.",
+    category: "Rollers", isHot: false, img: "Alat Berat Rollers 6620E.png", desc: "Medium roller.",
     specs: { "OPERATING WEIGHT":"20,000 kg", "VIB FREQ":"28/32 Hz", "APTITUDE":"2.0/1.3 mm" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Mass": "20,000 kg" } },
@@ -1270,7 +1270,7 @@ const products = {
     ]
   },
   "6622E": {
-    category: "Rollers", isHot: false, img: "6622E.png", desc: "Heavy roller.",
+    category: "Rollers", isHot: false, img: "Alat Berat Rollers 6622E.png", desc: "Heavy roller.",
     specs: { "OPERATING WEIGHT":"22,000 kg", "VIB FREQ":"28/33 Hz", "APTITUDE":"2.0/1.2 mm" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Mass": "22,000 kg", "Mass On Vibrating Drum": "13,800 kg" } },
@@ -1280,7 +1280,7 @@ const products = {
     ]
   },
   "6626E": {
-    category: "Rollers", isHot: false, img: "6626E.png", desc: "Extra heavy roller.",
+    category: "Rollers", isHot: false, img: "Alat Berat Rollers 6626E.png", desc: "Extra heavy roller.",
     specs: { "OPERATING WEIGHT":"26,000 kg", "VIB FREQ":"28/33 Hz", "APTITUDE":"1.8/1.8 mm" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Mass": "26,000 kg", "Mass On Vibrating Drum": "17,200 kg" } },
@@ -1290,7 +1290,7 @@ const products = {
     ]
   },
   "6636E": {
-    category: "Rollers", isHot: true, img: "6636E.png", desc: "Massive roller.",
+    category: "Rollers", isHot: true, img: "Alat Berat Rollers 6636E.jpg", desc: "Massive roller.",
     specs: { "OPERATING WEIGHT":"36,000 kg", "VIB FREQ":"28/30 Hz", "APTITUDE":"2.3/1.5 mm" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Mass": "36,000 kg", "Mass On Vibrating Drum": "24,000 kg" } },
@@ -1300,7 +1300,7 @@ const products = {
     ]
   },
   "6032E": {
-    category: "Rollers", isHot: false, img: "6032E.png", desc: "Compact roller.",
+    category: "Rollers", isHot: false, img: "Alat Berat Rollers 6032E.png", desc: "Compact roller.",
     specs: { "OPERATING WEIGHT":"3,360 kg", "VIB FREQ":"60 Hz", "APTITUDE":"0.45 mm" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Mass": "3,360 kg" } },
@@ -1310,7 +1310,7 @@ const products = {
     ]
   },
   "6516E": {
-    category: "Rollers", isHot: false, img: "6516E.png", desc: "Pneumatic tire roller.",
+    category: "Rollers", isHot: false, img: "Alat Berat Rollers 6516E.png", desc: "Pneumatic tire roller.",
     specs: { "OPERATING WEIGHT":"16,000 kg", "RATED POWER":"97 kW", "TIRE LOAD":"1,778 kg" },
     detailedSpecs: [
       { group: "Base", items: { "Max Operating Mass": "16,000 kg", "Single Tire Load": "1,778 kg" } },
@@ -1319,7 +1319,7 @@ const products = {
     ]
   },
   "6208E": {
-    category: "Rollers", isHot: false, img: "6208E.png", desc: "Tandem roller.",
+    category: "Rollers", isHot: false, img: "Alat Berat Rollers 6208E.png", desc: "Tandem roller.",
     specs: { "OPERATING WEIGHT":"9,500 kg", "VIB FREQ":"45/50 Hz", "APTITUDE":"0.8/0.4 mm" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Mass": "9,500 kg" } },
@@ -1329,7 +1329,7 @@ const products = {
 
   // ── PAVERS & COLD PLANER ──
   "509E": {
-    category: "Pavers", isHot: false, img: "509E.png", desc: "Asphalt paver.",
+    category: "Pavers", isHot: false, img: "Alat Berat Pavers 509E.png", desc: "Asphalt paver.",
     specs: { "PAVING WIDTH":"2.5-9.5 m", "THICKNESS":"300-500 mm", "RATED POWER":"158 kW" },
     detailedSpecs: [
       { group: "Extension Mode", items: { "Paving Width Range": "2.5～9.5 m", "Maximum Paving Thickness": "500 mm", "Theoretical Productivity": "900 t/h" } },
@@ -1338,7 +1338,7 @@ const products = {
     ]
   },
   "5100-2": {
-    category: "Cold Planer", isHot: false, img: "5100-2.png", desc: "Milling machine.",
+    category: "Cold Planer", isHot: false, img: "Alat Berat Cold Planer 5100-2.png", desc: "Milling machine.",
     specs: { "OPERATING MASS":"13,000 kg", "MILLING WIDTH":"1,000 mm", "RATED POWER":"154 kW" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "13,000 kg", "Milling Width": "1,000 mm", "Milling Depth": "0-180 mm", "No. of Tools": "92" } },
@@ -1349,7 +1349,7 @@ const products = {
 
   // ── SKID STEER & BACKHOE ──
   "365B": {
-    category: "Skid Steer Loaders", isHot: false, img: "365B.png", desc: "Compact skid steer.",
+    category: "Skid Steer Loaders", isHot: false, img: "Alat Berat Skid Steer Loaders 365B.png", desc: "Compact skid steer.",
     specs: { "OPERATING CAPACITY":"795 kg", "RATED POWER":"35.7 kW" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "2,950 kg", "Rated Operation Capacity": "795 kg", "Engine Power": "35.7 kW @ 2,600 rpm" } },
@@ -1359,7 +1359,7 @@ const products = {
     ]
   },
   "385B": {
-    category: "Skid Steer Loaders", isHot: false, img: "385B.png", desc: "Heavy skid steer.",
+    category: "Skid Steer Loaders", isHot: false, img: "Alat Berat Skid Steer Loaders 385B.png", desc: "Heavy skid steer.",
     specs: { "OPERATING CAPACITY":"1,045 kg", "RATED POWER":"61.3 kW" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "3,750 kg", "Rated Operation Capacity": "1,045 kg", "Engine Power": "61.3 kW @ 2,400 rpm" } },
@@ -1369,7 +1369,7 @@ const products = {
     ]
   },
   "766A": {
-    category: "Backhoe Loaders", isHot: false, img: "766A.png", desc: "Versatile backhoe.",
+    category: "Backhoe Loaders", isHot: false, img: "Alat Berat Blackhoe Loaders 766A.png", desc: "Versatile backhoe.",
     specs: { "OPERATING WEIGHT":"8,100 kg", "DIGGING DEPTH":"4,440 mm" },
     detailedSpecs: [
       { group: "Base", items: { "Operating Weight": "8,100 kg", "Gross Power": "70 kW @ 2,200 rpm" } },
@@ -1381,42 +1381,42 @@ const products = {
 
   // ── FORKLIFTS ──
   "CPD30-EJL": {
-    category: "Forklift", isHot: false, img: "CPD30-EJL.png", desc: "Electric forklift.",
+    category: "Forklift", isHot: false, img: "Alat Berat Forklift CPD30-EJL.png", desc: "Electric forklift.",
     specs: { "CAPACITY":"3,000 kg", "LOAD CENTER":"500 mm" },
     detailedSpecs: [
       { group: "Base", items: { "Power Type": "Electric", "Capacity": "3,000 kg", "Load Center": "500 mm", "Rate Power": "10 / 15 kW", "Service Weight": "4,160 kg", "Std. Fork Height": "3,000 mm", "Max. Fork Height": "7,000 mm" } }
     ]
   },
   "CPCD30": {
-    category: "Forklift", isHot: false, img: "CPCD30.png", desc: "Diesel forklift.",
+    category: "Forklift", isHot: false, img: "Alat Berat Forklift CPCD30.png", desc: "Diesel forklift.",
     specs: { "CAPACITY":"3,000 kg", "LOAD CENTER":"500 mm" },
     detailedSpecs: [
       { group: "Base", items: { "Power Type": "Diesel Gas/LPG", "Capacity": "3,000 kg", "Load Center": "500 mm", "Rate Power": "35.4/46 kW", "Service Weight": "4,230 kg", "Std. Fork Height": "3,000 mm", "Max. Fork Height": "7,000 mm" } }
     ]
   },
   "CLG2050H": {
-    category: "Forklift", isHot: false, img: "CLG2050H.png", desc: "Heavy diesel forklift.",
+    category: "Forklift", isHot: false, img: "Alat Berat Forklift CLG2050H.png", desc: "Heavy diesel forklift.",
     specs: { "CAPACITY":"5,000 kg", "LOAD CENTER":"600 mm" },
     detailedSpecs: [
       { group: "Base", items: { "Power Type": "Diesel", "Capacity": "5,000 kg", "Load Center": "600 mm", "Rate Power": "73.5/82.4 kW", "Service Weight": "8,000 kg", "Std. Fork Height": "3,000 mm", "Max. Fork Height": "6,000 mm" } }
     ]
   },
   "CLG2100H": {
-    category: "Forklift", isHot: false, img: "CLG2100H.png", desc: "Super heavy diesel forklift.",
+    category: "Forklift", isHot: false, img: "Alat Berat Forklift CLG2100H.png", desc: "Super heavy diesel forklift.",
     specs: { "CAPACITY":"10,000 kg", "LOAD CENTER":"600 mm" },
     detailedSpecs: [
       { group: "Base", items: { "Power Type": "Diesel", "Capacity": "10,000 kg", "Load Center": "600 mm", "Rate Power": "82.4/86/92 kW", "Service Weight": "12,800 kg", "Std. Fork Height": "3,000 mm", "Max. Fork Height": "6,000 mm" } }
     ]
   },
   "CLGA25-S/CEL": {
-    category: "Forklift", isHot: false, img: "CLGA25-S CEL.png", desc: "Electric forklift 2.5T.",
+    category: "Forklift", isHot: false, img: "Alat Berat Forklift CLGA25-S CEL.png", desc: "Electric forklift 2.5T.",
     specs: { "CAPACITY":"2,500 kg", "LOAD CENTER":"500 mm" },
     detailedSpecs: [
       { group: "Base", items: { "Power Type": "Electric", "Capacity": "2,500 kg", "Load Center": "500 mm", "Rate Power": "11 / 15 kW", "Service Weight": "3,966 kg", "Std. Fork Height": "3,000 mm", "Max. Fork Height": "6,000 mm" } }
     ]
   },
   "CLGA35A-S/CEL": {
-    category: "Forklift", isHot: false, img: "CLGA35A-S CEL.png", desc: "Electric forklift 3.5T.",
+    category: "Forklift", isHot: false, img: "Alat Berat Forklift CLGA35-S CEL.png", desc: "Electric forklift 3.5T.",
     specs: { "CAPACITY":"3,500 kg", "LOAD CENTER":"500 mm" },
     detailedSpecs: [
       { group: "Base", items: { "Power Type": "Electric", "Capacity": "3,500 kg", "Load Center": "500 mm", "Rate Power": "16 / 16 kW", "Service Weight": "5,260 kg", "Std. Fork Height": "3,000 mm", "Max. Fork Height": "7,000 mm" } }
@@ -1425,7 +1425,7 @@ const products = {
 
   // ── AERIAL WORK PLATFORM ──
   "LS0507EM": {
-    category: "Aerial Work Platform", isHot: false, img: "LS0507EM.png", desc: "Scissor lift.",
+    category: "Aerial Work Platform", isHot: false, img: "Alat Berat Aerial Work Platform LS0507EM.png", desc: "Scissor lift.",
     specs: { "MAX WORK HEIGHT":"6.5 m", "RATED LOAD":"240 kg", "LENGTH":"1.49 m" },
     detailedSpecs: [
       { group: "Dimensions", items: { "Max. Work Height": "6.5 m", "Max. Platform Height": "4.5 m", "Platform Size (L×W)": "1.3×0.72 m", "Overall Length": "1.49 m", "Overall Width": "0.76 m" } },
@@ -1434,7 +1434,7 @@ const products = {
     ]
   },
   "LS0808H": {
-    category: "Aerial Work Platform", isHot: false, img: "LS0808H.png", desc: "Scissor lift 10m.",
+    category: "Aerial Work Platform", isHot: false, img: "Alat Berat Aerial Work Platform LS0808H.png", desc: "Scissor lift 10m.",
     specs: { "MAX WORK HEIGHT":"10 m", "RATED LOAD":"230 kg", "LENGTH":"2.48 m" },
     detailedSpecs: [
       { group: "Dimensions", items: { "Max. Work Height": "10 m", "Max. Platform Height": "8 m", "Platform Size (L×W)": "2.28×0.81 m", "Overall Length": "2.49 m", "Overall Width": "0.844 m" } },
@@ -1443,7 +1443,7 @@ const products = {
     ]
   },
   "LSC0607DH": {
-    category: "Aerial Work Platform", isHot: false, img: "LSC0607DH.png", desc: "Compact lift.",
+    category: "Aerial Work Platform", isHot: false, img: "Alat Berat Aerial Work Platform LSC0607DH.png", desc: "Compact lift.",
     specs: { "MAX WORK HEIGHT":"7.8 m", "LENGTH":"1.85 m" },
     detailedSpecs: [
       { group: "Dimensions", items: { "Max. Work Height": "7.8 m", "Platform Length": "1.64 m", "Overall Length": "1.85 m", "Overall Width": "0.78 m" } },
@@ -1453,7 +1453,7 @@ const products = {
     ]
   },
   "LS1012H": {
-    category: "Aerial Work Platform", isHot: false, img: "LS1012H.png", desc: "High scissor lift.",
+    category: "Aerial Work Platform", isHot: false, img: "Alat Berat Aerial Work Platform LS1012H.png", desc: "High scissor lift.",
     specs: { "MAX WORK HEIGHT":"12 m", "RATED LOAD":"350 kg", "LENGTH":"2.49 m" },
     detailedSpecs: [
       { group: "Dimensions", items: { "Max. Work Height": "12 m", "Max. Platform Height": "10 m", "Platform Size (L×W)": "2.28×1.15 m", "Overall Length": "2.49 m", "Overall Width": "1.19 m" } },
@@ -1462,7 +1462,7 @@ const products = {
     ]
   },
   "LS1412H": {
-    category: "Aerial Work Platform", isHot: false, img: "LS1412H.png", desc: "Extra high lift.",
+    category: "Aerial Work Platform", isHot: false, img: "Alat Berat Aerial Work Platform LS1412H.png", desc: "Extra high lift.",
     specs: { "MAX WORK HEIGHT":"15.7 m", "RATED LOAD":"250 kg", "LENGTH":"2.84 m" },
     detailedSpecs: [
       { group: "Dimensions", items: { "Max. Work Height": "15.7 m", "Max. Platform Height": "13.7 m", "Platform Size (L×W)": "2.64×1.15 m", "Overall Length": "2.84 m", "Overall Width": "1.25 m" } },
@@ -1471,7 +1471,7 @@ const products = {
     ]
   },
   "LT20JG4": {
-    category: "Aerial Work Platform", isHot: false, img: "LT20JG4.png", desc: "Telescopic boom lift.",
+    category: "Aerial Work Platform", isHot: false, img: "Alat Berat Aerial Work Platform LT20JG4.png", desc: "Telescopic boom lift.",
     specs: { "MAX WORK HEIGHT":"22 m", "RANGE":"17.8 m", "LENGTH":"9.7 m" },
     detailedSpecs: [
       { group: "Dimensions", items: { "Max. Work Height": "22 m", "Max. Platform Height": "20 m", "Overall Length(Stowed)": "9.7 m", "Overall Width(Stowed)": "2.49 m" } },
@@ -1481,7 +1481,7 @@ const products = {
     ]
   },
   "LA20JE": {
-    category: "Aerial Work Platform", isHot: false, img: "LA20JE.png", desc: "Articulated boom lift.",
+    category: "Aerial Work Platform", isHot: false, img: "Alat Berat Aerial Work Platform LA20JE.png", desc: "Articulated boom lift.",
     specs: { "MAX WORK HEIGHT":"22.2 m", "LENGTH":"8.87 m" },
     detailedSpecs: [
       { group: "Dimensions", items: { "Max. Work Height": "22.2 m", "Platform Length": "20.22 m", "Overall Length": "8.87 m", "Overall Width": "2.42 m" } },
@@ -1491,7 +1491,7 @@ const products = {
     ]
   },
   "LT26JE": {
-    category: "Aerial Work Platform", isHot: false, img: "LT26JE.png", desc: "Large telescopic boom lift.",
+    category: "Aerial Work Platform", isHot: false, img: "Alat Berat Aerial Work Platform LT26JE.png", desc: "Large telescopic boom lift.",
     specs: { "MAX WORK HEIGHT":"28.1 m", "RANGE":"19.88 m", "LENGTH":"11.03 m" },
     detailedSpecs: [
       { group: "Dimensions", items: { "Max. Work Height": "28.1 m", "Max. Platform Height": "26.1 m", "Overall Length(Stowed)": "11.03 m", "Overall Width(Stowed)": "2.44 m" } },
@@ -1503,7 +1503,7 @@ const products = {
 
   // ── CRANES ──
   "LTC250V5": {
-    category: "Cranes", isHot: false, img: "LTC250V5.png", desc: "Truck crane 25T.",
+    category: "Cranes", isHot: false, img: "Alat Berat Cranes LTC250V5.png", desc: "Truck crane 25T.",
     specs: { "MAX LIFTING":"25 t", "BOOM LENGTH":"41+8 m" },
     detailedSpecs: [
       { group: "Crane", items: { "Max. rated lifting capacity": "25 t", "Overall Length": "12,500 mm", "Overall Width": "2,575 mm", "Overall Height": "3,445 mm", "Total weight": "32,000 kg" } },
@@ -1513,7 +1513,7 @@ const products = {
     ]
   },
   "LTC550L5": {
-    category: "Cranes", isHot: false, img: "LTC550L5.png", desc: "Truck crane 55T.",
+    category: "Cranes", isHot: false, img: "Alat Berat Cranes LTC550L5.jpg", desc: "Truck crane 55T.",
     specs: { "MAX LIFTING":"55 t", "BOOM LENGTH":"45+16 m" },
     detailedSpecs: [
       { group: "Crane", items: { "Max. rated lifting capacity": "55 t", "Overall Length": "14,025 mm", "Overall Width": "2,665 mm", "Overall Height": "3,700 mm", "Total weight": "40,800 kg" } },
@@ -1523,7 +1523,7 @@ const products = {
     ]
   },
   "TC600C5": {
-    category: "Cranes", isHot: false, img: "TC600C5.png", desc: "Crane 60T.",
+    category: "Cranes", isHot: false, img: "Alat Berat Cranes TC600C5.png", desc: "Crane 60T.",
     specs: { "MAX LIFTING":"55 t", "LIFTING HEIGHT":"45.6 m" },
     detailedSpecs: [
       { group: "Crane", items: { "Crane Capacity": "60t at 3 meters working range", "Overall Length": "14,100 mm", "Overall Width": "2,800 mm", "Overall Height": "3,730 mm", "Dead Weight": "42,200 kg" } },
@@ -1533,7 +1533,7 @@ const products = {
     ]
   },
   "TC750C5": {
-    category: "Cranes", isHot: true, img: "TC750C5.png", desc: "Heavy Crane 75T.",
+    category: "Cranes", isHot: true, img: "Alat Berat Cranes TC750C5.png", desc: "Heavy Crane 75T.",
     specs: { "MAX LIFTING":"75 t", "LIFTING HEIGHT":"48.3 m" },
     detailedSpecs: [
       { group: "Crane", items: { "Crane Capacity": "75t at 3 meters working range", "Overall Length": "14,820 mm", "Overall Width": "2,800 mm", "Overall Height": "3,780 mm", "Dead Weight": "46,000 kg" } },
@@ -1545,34 +1545,34 @@ const products = {
 
   // ── OTHERS (TRACTOR, SUGARCANE, COMPRESSOR) ──
   "LT2004": {
-    category: "Tractor", isHot: false, img: "LT2004.png", desc: "Agricultural Tractor.",
+    category: "Tractor", isHot: false, img: "Alat Berat Tractor LT2004.png", desc: "Agricultural Tractor.",
     specs: { "MODEL":"LT2004" },
     detailedSpecs: [ { group: "Base", items: { "Model": "LT2004" } } ]
   },
   "S918T": {
-    category: "Sugarcane Harvester", isHot: false, img: "S918T.png", desc: "Efficient Sugarcane Harvester.",
+    category: "Sugarcane Harvester", isHot: false, img: "Alat Berat Sugarcane Harvester S918T.png", desc: "Efficient Sugarcane Harvester.",
     specs: { "MODEL":"S918T" },
     detailedSpecs: [ { group: "Base", items: { "Model": "S918T" } } ]
   },
   "CSH500A-13": {
-    category: "Air Compressor", isHot: false, img: "CSH500A-13.png", desc: "Air Compressor.",
+    category: "Air Compressor", isHot: false, img: "Alat Berat Air Compressor CSH500A-13.png", desc: "Air Compressor.",
     specs: { "MODEL":"CSH500A-13" },
     detailedSpecs: [ { group: "Base", items: { "Model": "CSH500A-13" } } ]
   },
   "CSH300A-12": {
-    category: "Air Compressor", isHot: false, img: "CSH300A-12.png", desc: "Air Compressor.",
+    category: "Air Compressor", isHot: false, img: "Alat Berat Air Compressor CSH300A-12.png", desc: "Air Compressor.",
     specs: { "MODEL":"CSH300A-12" },
     detailedSpecs: [ { group: "Base", items: { "Model": "CSH300A-12" } } ]
   },
   "CSH175A-8": {
-    category: "Air Compressor", isHot: false, img: "CSH175A-8.png", desc: "Air Compressor.",
+    category: "Air Compressor", isHot: false, img: "Alat Berat Air Compressor CSH175A-8.png", desc: "Air Compressor.",
     specs: { "MODEL":"CSH175A-8" },
     detailedSpecs: [ { group: "Base", items: { "Model": "CSH175A-8" } } ]
   },
 
   // ── FOUNDATION EQUIPMENT ──
   "SD25A": {
-    category: "Foundation Equipment", isHot: false, img: "SD25A.png", desc: "Rotary Drilling Rig.",
+    category: "Foundation Equipment", isHot: false, img: "Alat Berat Foundation Equipment SD25A.png", desc: "Rotary Drilling Rig.",
     specs: { "RATED POWER":"242 kW", "ROTARY TORQUE":"250 kNm", "LIFTING FORCE":"270 kN" },
     detailedSpecs: [
       { group: "Rotary Head", items: { "Rotary Torque": "250 kNm", "Rotation Speed": "6～26 r/min" } },
@@ -1583,7 +1583,7 @@ const products = {
     ]
   },
   "SD30A": {
-    category: "Foundation Equipment", isHot: false, img: "SD30A.png", desc: "Heavy Rotary Drilling Rig.",
+    category: "Foundation Equipment", isHot: false, img: "Alat Berat Foundation Equipment SD30A.png", desc: "Heavy Rotary Drilling Rig.",
     specs: { "RATED POWER":"299 kW", "ROTARY TORQUE":"300 kNm", "LIFTING FORCE":"300 kN" },
     detailedSpecs: [
       { group: "Rotary Head", items: { "Rotary Torque": "300 kNm", "Rotation Speed": "6～30 r/min" } },
@@ -1594,7 +1594,7 @@ const products = {
     ]
   },
   "SG50A": {
-    category: "Foundation Equipment", isHot: false, img: "SG50A.png", desc: "Diaphragm Wall Grab.",
+    category: "Foundation Equipment", isHot: false, img: "Alat Berat Foundation Equipment SG50A.png", desc: "Diaphragm Wall Grab.",
     specs: { "RATED POWER":"266 kW", "LIFTING FORCE":"500 kN", "GRAB WEIGHT":"14-25 t" },
     detailedSpecs: [
       { group: "Base", items: { "Wall Width": "0.3-1.5 m", "Wall Depth": "75 m", "Max. Extraction Force": "500 kN", "Machine Weight (w/o Shovel)": "72 T", "Grab Weight": "14-25 t" } },
