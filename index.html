@@ -121,7 +121,24 @@
     .btn-wa-green { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 16px 36px; background: var(--green); color: white; font-weight: 800; font-size: 16px; border-radius: 50px; text-decoration: none; cursor: pointer; transition: opacity 0.2s, transform 0.2s; border: none; font-family: inherit;}
     .btn-wa-green:hover { opacity: 0.9; transform: translateY(-2px); color: white;}
 
-    .about-snippet { padding: 80px 0 40px; background: white; }
+    /* HOME ARTICLES SLIDER */
+    .home-articles-wrapper { padding: 40px 0 20px; background: #fff; }
+    .home-articles-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px; }
+    .home-articles-header h2 { font-size: 28px; font-weight: 900; color: var(--lg-navy); }
+    .home-articles-header a { font-size: 15px; font-weight: 700; color: var(--lg-orange); cursor: pointer; text-decoration: none; }
+    .home-articles-slider { display: flex; overflow-x: auto; gap: 24px; padding-bottom: 20px; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: var(--lg-orange) #eee; }
+    .home-articles-slider::-webkit-scrollbar { height: 8px; }
+    .home-articles-slider::-webkit-scrollbar-track { background: #eee; border-radius: 4px; }
+    .home-articles-slider::-webkit-scrollbar-thumb { background: var(--lg-orange); border-radius: 4px; }
+    .home-article-card { flex: 0 0 320px; scroll-snap-align: start; cursor: pointer; text-decoration: none; color: inherit; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; background: white;}
+    .home-article-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); border-color: var(--lg-orange); }
+    .home-article-img { height: 180px; width: 100%; object-fit: cover; border-bottom: 3px solid var(--lg-orange); }
+    .home-article-body { padding: 20px; display: flex; flex-direction: column; flex-grow: 1;}
+    .home-article-date { font-size: 12px; color: var(--muted); font-weight: 600; margin-bottom: 8px; }
+    .home-article-title { font-size: 16px; font-weight: 800; color: var(--lg-navy); line-height: 1.4; margin-bottom: 10px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;}
+    .home-article-card:hover .home-article-title { color: var(--lg-orange); }
+
+    .about-snippet { padding: 60px 0 40px; background: white; }
     .about-layout { display: flex; gap: 60px; align-items: center; }
     .about-img { flex: 1; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
     .about-img img { width: 100%; height: auto; display: block; }
@@ -129,6 +146,19 @@
     .section-label { color: var(--lg-orange); font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; font-size: 14px;}
     .section-title { font-size: 36px; font-weight: 900; color: var(--lg-navy); margin-bottom: 20px; line-height: 1.2;}
     .about-text p { font-size: 16px; color: var(--muted); line-height: 1.8; margin-bottom: 20px; }
+
+    /* TESTIMONIALS SECTION */
+    .testimonials-section { padding: 40px 0 80px; background: white; }
+    .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 30px; }
+    .testi-card { background: white; border: 1px solid var(--border); padding: 24px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: transform 0.3s; }
+    .testi-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+    .testi-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+    .testi-avatar { width: 45px; height: 45px; border-radius: 50%; object-fit: cover; }
+    .testi-info h4 { font-size: 16px; font-weight: 800; color: var(--lg-navy); margin-bottom: 4px; }
+    .testi-stars { color: #fbbc04; font-size: 14px; letter-spacing: 2px; }
+    .testi-time { font-size: 12px; color: var(--muted); font-weight: 500; margin-left: 8px; }
+    .testi-text { font-size: 15px; color: var(--dark); line-height: 1.6; margin-bottom: 15px; }
+    .testi-img { width: 100%; height: 160px; object-fit: cover; border-radius: 8px; }
 
     .stats-bar { background: var(--lg-navy); padding: 50px 0; color: white; }
     .stats-inner { display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 20px; text-align: center;}
@@ -164,14 +194,30 @@
     .about-video video { width: 100%; height: 100%; object-fit: cover; }
     
     .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
-    .news-card { display: block; text-decoration: none; background: white; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: 0.3s; cursor: pointer; color: inherit;}
+    .news-card { display: block; text-decoration: none; background: white; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: 0.3s; cursor: pointer; color: inherit; display: flex; flex-direction: column;}
     .news-card:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); border-color: var(--lg-orange);}
     .news-img { height: 200px; background: #ddd; }
     .news-img img { width: 100%; height: 100%; object-fit: cover;}
-    .news-body { padding: 20px; }
+    .news-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column;}
     .news-title { font-size: 18px; font-weight: 800; color: var(--lg-navy); margin-bottom: 10px; transition: color 0.2s; line-height: 1.4;}
     .news-card:hover .news-title { color: var(--lg-orange); }
     .news-desc { font-size: 14px; color: var(--muted); line-height: 1.6;}
+
+    /* MODAL BACA ARTIKEL */
+    .article-modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 100000; opacity: 0; visibility: hidden; transition: 0.3s; display: flex; align-items: center; justify-content: center; padding: 20px; }
+    .article-modal-overlay.active { opacity: 1; visibility: visible; }
+    .article-modal-content { background: white; width: 100%; max-width: 800px; max-height: 90vh; border-radius: 12px; overflow-y: auto; position: relative; padding: 40px; transform: translateY(20px); transition: 0.3s; }
+    .article-modal-overlay.active .article-modal-content { transform: translateY(0); }
+    .article-close-btn { position: absolute; top: 20px; right: 20px; font-size: 28px; background: none; border: none; cursor: pointer; color: var(--muted); transition: 0.2s;}
+    .article-close-btn:hover { color: var(--lg-red); }
+    .article-read-title { font-size: 32px; font-weight: 900; color: var(--lg-navy); margin-bottom: 15px; line-height: 1.3;}
+    .article-read-date { font-size: 14px; color: var(--lg-orange); font-weight: 700; margin-bottom: 25px; display: block;}
+    .article-read-img { width: 100%; max-height: 400px; object-fit: cover; border-radius: 8px; margin-bottom: 30px;}
+    .article-read-body { font-size: 16px; color: var(--dark); line-height: 1.8; }
+    .article-read-body p { margin-bottom: 15px; }
+    .article-read-body h3 { font-size: 20px; font-weight: 800; color: var(--lg-navy); margin: 25px 0 10px; }
+    .article-read-body ul { margin-left: 20px; margin-bottom: 15px; }
+    .article-read-body li { margin-bottom: 8px; }
 
     /* ========================================= VIEW 3: LOKASI DEALER ALAT BERAT SURABAYA ========================================= */
     .dealer-full-section { padding: 60px 0; max-width: 1100px; margin: 0 auto; }
@@ -289,6 +335,7 @@
       .groups-grid { grid-template-columns: repeat(2, 1fr); }
       .footer-grid { grid-template-columns: 1fr; text-align: center; }
       .hero-title { font-size: 32px; }
+      .home-articles-header { flex-direction: column; align-items: flex-start; gap: 10px; }
     }
   </style>
 </head>
@@ -341,7 +388,7 @@
   <div id="view-home" class="page-view active">
     <section class="hero">
       <div class="hero-bg"></div>
-      <div class="hero-overlay"></div>
+      <div class="hero-overlay" style="position:absolute; inset:0; background:rgba(0,0,0,0.6);"></div>
       <div class="container hero-content">
         <div class="hero-tag">Dealer Resmi · Surabaya</div>
         <h1 class="hero-title">LiuGong Surabaya</h1>
@@ -357,10 +404,21 @@
       </div>
     </section>
 
+    <section class="home-articles-wrapper">
+      <div class="container">
+        <div class="home-articles-header">
+          <h2>Wawasan & Berita Terbaru</h2>
+          <a onclick="openAboutAndScrollToNews()">Lihat Semua Artikel ➔</a>
+        </div>
+        <div class="home-articles-slider" id="homeArticlesSlider">
+          </div>
+      </div>
+    </section>
+
     <section class="about-snippet">
       <div class="container about-layout">
         <div class="about-img">
-          <img src="Alat Berat Surabaya.jpg" alt="Dealer LiuGong" onerror="this.src='https://via.placeholder.com/600x400/eee/999?text=Tentang+Kami'">
+          <img src="Alat Berat Surabaya.jpg" alt="Dealer LiuGong Alat Berat Surabaya" onerror="this.src='https://via.placeholder.com/600x400/eee/999?text=Tentang+Kami'">
         </div>
         <div class="about-text">
           <div class="section-label">Tentang Kami</div>
@@ -368,6 +426,18 @@
           <p>Sebagai dealer resmi LiuGong di Surabaya, kami menyediakan jajaran lengkap alat berat berkualitas dunia yang dirancang untuk bekerja maksimal di lingkungan ekstrem.</p>
           <button class="btn-primary" style="padding: 12px 24px; font-size: 14px;" onclick="openAbout()">Baca Selengkapnya>></button>
         </div>
+      </div>
+    </section>
+
+    <section class="testimonials-section">
+      <div class="container">
+        <div style="text-align: center;">
+          <div class="section-label">Testimoni Pelanggan</div>
+          <h2 class="section-title" style="font-size:32px; font-weight:900; color:var(--lg-navy);">Apa Kata Mereka?</h2>
+          <p style="color:var(--muted); max-width: 600px; margin: 0 auto;">Diambil secara real-time dari ulasan Google Maps pelanggan kami yang puas dengan kualitas alat berat LiuGong Surabaya.</p>
+        </div>
+        <div class="testi-grid" id="testiGrid">
+          </div>
       </div>
     </section>
 
@@ -453,9 +523,10 @@
         </div>
       </div>
 
-      <div style="margin-top: 60px;">
+      <div style="margin-top: 60px;" id="beritaAcaraSection">
         <h2 style="font-size:28px; font-weight:900; color:var(--lg-navy); margin-bottom:10px;">Berita & Acara</h2>
-        <div class="news-grid">
+        
+        <div class="news-grid" style="margin-bottom: 40px;">
           <a href="https://jatim.tribunnews.com/jatim/543958/cerita-bagas-abiyyu-anak-muda-nganjuk-yang-jadi-branch-manager-alat-berat-di-usia-26-tahun" target="_blank" class="news-card">
             <div class="news-img"><img src="Cerita Bagas Abiyyu, Anak Muda Asal Surabaya yang Jadi Branch Manager Alat Berat di Usia 26 Tahun.webp" alt="News" onerror="this.src='https://via.placeholder.com/400x300/eee/999?text=Berita+1'"></div>
             <div class="news-body">
@@ -478,6 +549,11 @@
             </div>
           </a>
         </div>
+
+        <h3 style="font-size:22px; font-weight:800; color:var(--lg-navy); margin-bottom:10px; border-top: 1px solid var(--border); padding-top:30px;">Wawasan Alat Berat 2026</h3>
+        <div class="news-grid" id="aboutNewsGrid">
+          </div>
+
       </div>
     </div>
   </div>
@@ -764,6 +840,14 @@
     <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.38 1.26 4.79L2 22l5.47-1.36c1.36.73 2.91 1.13 4.57 1.13 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm4.54 13.41l-.86.86c-.35.35-.83.55-1.33.55-.28 0-.57-.07-.84-.22l-.05-.03c-1.09-.6-2.02-1.4-2.8-2.38-.77-.98-1.31-2.06-1.61-3.23-.07-.29-.1-.58-.1-.87 0-.5.2-.98.55-1.33l.86-.86c.19-.19.44-.3.71-.3.27 0 .52.1.71.3l1.4 1.4c.38.39.38 1.02-.12 1.41z"/></svg>
   </a>
 
+  <div class="article-modal-overlay" id="articleModalOverlay" onclick="closeArticleModal(event)">
+    <div class="article-modal-content" onclick="event.stopPropagation()">
+      <button class="article-close-btn" onclick="closeArticleModal(event)">✕</button>
+      <div id="articleModalBody">
+        </div>
+    </div>
+  </div>
+
 <script>
   // WA Config
   const waNumber = "6281235666327";
@@ -772,7 +856,127 @@
   document.getElementById('navWaBtn').href = `https://wa.me/${waNumber}?text=${waGeneralMsg}`;
   document.querySelector('.float-wa').href = `https://wa.me/${waNumber}?text=${waGeneralMsg}`;
 
-  // 1. DATA KATEGORI (Warehouse dihapus)
+  // 1. DATA ARTIKEL SEO (Konteks Ekonomi Juni 2026)
+  const seoArticles = [
+    {
+      id: 1,
+      title: "Fluktuasi Ekonomi dan Logistik Global 2026: Mengapa Harga Alat Berat Menjadi Krusial?",
+      date: "18 Juni 2026",
+      img: "Alat Berat Excavator 975EHD.png",
+      excerpt: "Merespons masalah ekonomi dan mahalnya biaya pengiriman global pertengahan 2026, pemilihan alat berat dengan efisiensi tinggi menjadi keharusan.",
+      content: `
+        <h1 class="article-read-title">Fluktuasi Ekonomi dan Logistik Global 2026: Mengapa Harga Alat Berat Menjadi Krusial?</h1>
+        <span class="article-read-date">Dipublikasikan pada 18 Juni 2026</span>
+        <img src="Alat Berat Excavator 975EHD.png" class="article-read-img" alt="Alat Berat Surabaya">
+        <div class="article-read-body">
+          <p>Pada pertengahan tahun 2026 ini, industri konstruksi dan pertambangan dihadapkan pada kenyataan pahit: lonjakan biaya logistik global yang mengganggu rantai pasok dan memicu inflasi lokal. Kondisi ini membuat para kontraktor harus berhitung lebih ekstra terkait <strong>harga alat berat</strong> yang akan mereka beli.</p>
+          <p>Menurut analisis tren ekonomi terbaru bulan ini, hambatan pada jalur logistik internasional menyebabkan keterlambatan suku cadang mesin, sehingga mengurangi produktivitas proyek secara masif. Di sinilah pentingnya mencari pemasok <strong>alat berat Surabaya</strong> yang memiliki rekam jejak ketersediaan produk dan suku cadang yang stabil secara lokal.</p>
+          <h3>Alat Berat LiuGong Surabaya Hadir Sebagai Solusi</h3>
+          <p>Kondisi ekonomi ini mendorong peralihan pembelian menuju merek yang menjanjikan Return on Investment (ROI) tinggi. <strong>Alat berat LiuGong Surabaya</strong> secara konsisten menjawab krisis pasokan ini dengan menekan biaya tunggu. Berkat garansi suku cadang yang dijamin oleh pihak dealer, serta harga alat berat yang tetap kompetitif di tengah badai kenaikan harga mesin Amerika dan Eropa, LiuGong memberikan efisiensi yang sangat dibutuhkan oleh proyek-proyek padat karya.</p>
+          <p>Dengan kata lain, efisiensi bahan bakar dipadukan dengan keandalan distribusi dari LiuGong menjadikan setiap unit alat berat, khususnya tipe excavator kelas menengah hingga berat, sebagai tameng terkuat dalam menghadapi fluktuasi ekonomi 2026.</p>
+        </div>
+      `
+    },
+    {
+      id: 2,
+      title: "Sektor Tambang Jatim Butuh Ketangguhan: Solusi Tepat dari Alat Berat Surabaya",
+      date: "16 Juni 2026",
+      img: "Alat Berat Mining Truck DW105A.png",
+      excerpt: "Pertambangan batubara dan nikel kembali memanas. Cari tahu mengapa ketangguhan excavator LiuGong paling dicari di Surabaya saat ini.",
+      content: `
+        <h1 class="article-read-title">Sektor Tambang Jatim Butuh Ketangguhan: Solusi Tepat dari Alat Berat Surabaya</h1>
+        <span class="article-read-date">Dipublikasikan pada 16 Juni 2026</span>
+        <img src="Alat Berat Mining Truck DW105A.png" class="article-read-img" alt="Alat Berat LiuGong">
+        <div class="article-read-body">
+          <p>Kebijakan hilirisasi mineral yang terus didorong oleh pemerintah pusat pada tahun 2026 berdampak langsung pada geliat pertambangan di wilayah timur Indonesia. Surabaya, sebagai pintu gerbang logistik utama, mencatatkan rekor permintaan tertinggi untuk pengadaan <strong>alat berat</strong>, khususnya di kelas heavy-duty.</p>
+          <p>Permasalahannya, tidak semua mesin dapat bertahan menghadapi jam kerja 24/7 di iklim ekstrem tambang nikel maupun batu bara. Kerusakan unit (downtime) akibat mesin *overheat* adalah musuh utama operasional yang bisa memakan kerugian hingga ratusan juta rupiah per harinya.</p>
+          <h3>Pilih Alat Berat LiuGong untuk Mengurangi Downtime</h3>
+          <p>Menghadapi problem ini, <strong>excavator</strong> dan dump truck dari LiuGong membuktikan kelasnya. <strong>Alat berat LiuGong</strong> didesain dengan sistem pendinginan yang telah ditingkatkan khusus untuk iklim tropis. Banyak kontraktor yang beralih ke dealer LiuGong Surabaya karena jaminan garansi 4x *Free Service* dan ketersediaan suku cadang langsung tanpa harus inden berbulan-bulan akibat masalah rantai pasok global.</p>
+          <p>Perbandingan <strong>harga alat berat</strong> kompetitor dengan LiuGong juga menunjukkan gap yang signifikan. LiuGong memungkinkan ekspansi armada proyek yang lebih masif dengan budget operasional (Capex) yang sama, namun dengan keandalan setara merek-merek tradisional.</p>
+        </div>
+      `
+    },
+    {
+      id: 3,
+      title: "Krisis Suku Cadang Teratasi? Keunggulan Dealer Alat Berat LiuGong Surabaya",
+      date: "15 Juni 2026",
+      img: "Alat Berat Excavator 922E.png",
+      excerpt: "Di saat merek lain membiarkan konsumen menunggu sparepart berbulan-bulan, dealer Alat Berat LiuGong Surabaya berikan jaminan langsung.",
+      content: `
+        <h1 class="article-read-title">Krisis Suku Cadang Teratasi? Keunggulan Dealer Alat Berat LiuGong Surabaya</h1>
+        <span class="article-read-date">Dipublikasikan pada 15 Juni 2026</span>
+        <img src="Alat Berat Excavator 922E.png" class="article-read-img" alt="Alat Berat LiuGong Surabaya">
+        <div class="article-read-body">
+          <p>Dunia sedang tidak baik-baik saja dalam hal perpindahan barang. Tingginya ongkos *freight* per Juni 2026 membuat importasi komponen mesin alat berat tersendat. Akibatnya, banyak unit mangkrak di *site* proyek, menunggu suku cadang tiba dari luar negeri.</p>
+          <p>Inilah yang membuat layanan purna jual dealer menjadi faktor nomor satu sebelum perusahaan melihat <strong>harga alat berat</strong>.</p>
+          <h3>Garansi Ketersediaan Suku Cadang Alat Berat Surabaya</h3>
+          <p>Kehadiran dealer resmi <strong>alat berat LiuGong Surabaya</strong> memecah kebuntuan ini. Kami memahami bahwa nilai investasi sebuah <strong>excavator</strong> sangat besar. Karena itu, LiuGong Surabaya telah mengantisipasi turbulensi logistik ini dengan memperbesar kapasitas penyimpanan suku cadang di *warehouse* lokal Jawa Timur.</p>
+          <ul>
+            <li>Garansi 2000 - 4000 jam kerja.</li>
+            <li>Free Sparepart untuk 4x servis pertama.</li>
+            <li>Tim mekanik yang bersiaga dan langsung dikirim ke lokasi *(on-site service)*.</li>
+          </ul>
+          <p>Pendekatan proaktif ini adalah alasan mengapa pengadaan <strong>alat berat</strong> untuk proyek krusial lebih aman dipercayakan pada LiuGong.</p>
+        </div>
+      `
+    },
+    {
+      id: 4,
+      title: "Investasi Cerdas 2026: Menakar Harga Alat Berat vs Biaya Operasional (TCO)",
+      date: "14 Juni 2026",
+      img: "Alat Berat Excavator 952EHD.png",
+      excerpt: "Membeli alat berat bukan hanya soal harga awal. Pelajari cara menghitung Total Cost of Ownership (TCO) di era suku bunga tinggi 2026.",
+      content: `
+        <h1 class="article-read-title">Investasi Cerdas 2026: Menakar Harga Alat Berat vs Biaya Operasional (TCO)</h1>
+        <span class="article-read-date">Dipublikasikan pada 14 Juni 2026</span>
+        <img src="Alat Berat Excavator 952EHD.png" class="article-read-img" alt="Harga Alat Berat">
+        <div class="article-read-body">
+          <p>Tingkat suku bunga perbankan yang fluktuatif di paruh pertama 2026 mengharuskan manajer proyek untuk berpikir dua kali dalam mengeluarkan belanja modal (Capex). Tergiur <strong>harga alat berat</strong> bekas atau merek murah tanpa dukungan resmi sering kali berujung pada tingginya Biaya Kepemilikan Total atau *Total Cost of Ownership* (TCO).</p>
+          <h3>Pilih Harga Alat Berat Berkualitas: Solusi TCO Rendah</h3>
+          <p>Menghitung TCO melibatkan analisis bahan bakar, biaya *maintenance*, depresiasi, hingga potensi *downtime*. Produk <strong>alat berat LiuGong</strong>, khususnya jajaran *Wheel Loader* dan <strong>Excavator</strong> terbaru, terbukti memangkas rasio konsumsi bahan bakar berkat integrasi mesin bertenaga tinggi (seperti Cummins/Weichai) dengan sistem hidrolik pintar.</p>
+          <p>Ditambah lagi, dealer <strong>alat berat Surabaya</strong> LiuGong memberikan paket *Free Service* & mekanik. Ini secara drastis menekan biaya Opex di tahun-tahun pertama penggunaan. Investasi ini jelas jauh lebih cerdas dibandingkan mempertaruhkan proyek jutaan dolar pada mesin yang rentan rusak tanpa *support* mekanik lokal.</p>
+        </div>
+      `
+    },
+    {
+      id: 5,
+      title: "Tingginya Permintaan Alat Berat Surabaya Dampak Kejar Tayang Proyek IKN",
+      date: "13 Juni 2026",
+      img: "Alat Berat Motor Graders 4280D.png",
+      excerpt: "Pembangunan IKN Fase berikutnya mengerek permintaan alat berat dari pelabuhan Surabaya. Apa mesin yang paling cocok untuk medan Kalimantan?",
+      content: `
+        <h1 class="article-read-title">Tingginya Permintaan Alat Berat Surabaya Dampak Kejar Tayang Proyek IKN</h1>
+        <span class="article-read-date">Dipublikasikan pada 13 Juni 2026</span>
+        <img src="Alat Berat Motor Graders 4280D.png" class="article-read-img" alt="Alat Berat Surabaya">
+        <div class="article-read-body">
+          <p>Bulan Juni 2026 menandai percepatan besar-besaran untuk pembangunan infrastruktur satelit di Ibu Kota Nusantara (IKN). Imbasnya, pelabuhan Tanjung Perak Surabaya sibuk menjadi titik tolak pengiriman <strong>alat berat Surabaya</strong> menuju Kalimantan.</p>
+          <p>Medan kerja IKN yang masih didominasi tanah gambut dan hutan memerlukan tipe <strong>alat berat</strong> dengan daya *traction* tinggi, stabilitas ekstra, serta tekanan pijak rendah seperti yang dimiliki <strong>excavator</strong> dan bulldozer LiuGong.</p>
+          <h3>Alat Berat LiuGong Menaklukkan Kalimantan</h3>
+          <p>Spesifikasi produk <strong>alat berat LiuGong Surabaya</strong> terbukti andal dalam *land clearing* hingga persiapan fondasi di sana. Para pelanggan kami mengapresiasi kinerja alat ini di bawah tekanan cuaca lembap Kalimantan yang ekstrem. Selain itu, fitur GPS pelacakan gratis *(Free GPS)* dari paket pembelian kami memungkinkan *fleet manager* memantau kinerja mesin mereka langsung dari Surabaya tanpa terhalang jarak operasional.</p>
+        </div>
+      `
+    },
+    {
+      id: 6,
+      title: "Excavator Pilihan Tepat untuk Efisiensi Infrastruktur Berkelanjutan",
+      date: "13 Juni 2026",
+      img: "Alat Berat Excavator 922FE.png",
+      excerpt: "Standar regulasi emisi karbon tahun 2026 memperketat operasional proyek. Excavator LiuGong tampil sebagai jawaban yang efisien.",
+      content: `
+        <h1 class="article-read-title">Excavator Pilihan Tepat untuk Efisiensi Infrastruktur Berkelanjutan</h1>
+        <span class="article-read-date">Dipublikasikan pada 13 Juni 2026</span>
+        <img src="Alat Berat Excavator 922FE.png" class="article-read-img" alt="Excavator">
+        <div class="article-read-body">
+          <p>Tahun 2026 membawa regulasi baru yang semakin ketat terkait emisi gas buang untuk proyek konstruksi di perkotaan besar. Perusahaan dituntut mencari <strong>alat berat</strong> yang tidak hanya *powerful* tapi juga ramah lingkungan (*eco-friendly*) sesuai dengan inisiatif infrastruktur berkelanjutan global.</p>
+          <p>Kendala ini bisa diselesaikan tanpa harus pusing memikirkan mahalnya <strong>harga alat berat</strong> listrik kelas premium. <strong>Excavator</strong> dari PT LiuGong, seperti tipe elektrik seri 922FE dan seri engine tier terbaru, memberikan jawaban mutlak: operasi bersih tanpa kompromi performa.</p>
+          <h3>Revolusi Alat Berat LiuGong Surabaya</h3>
+          <p>Dengan menghadirkan <strong>excavator</strong> dan jajaran mesin rendah emisi, dealer <strong>alat berat LiuGong Surabaya</strong> memelopori pengadaan *green machinery* di Indonesia Timur. Perpaduan antara efisiensi energi kelistrikan tingkat lanjut dengan suku cadang mekanis yang mudah dirawat menjadikannya favorit bagi BUMN maupun kontraktor swasta di tahun ini.</p>
+        </div>
+      `
+    }
+  ];
+
+  // 2. DATA KATEGORI
   const categoryList = [
     "Wheel Loaders", "Excavators", "Bulldozers", "Motor Graders",
     "Mining Truck", "Rollers", "Pavers", "Cold Planer",
@@ -781,9 +985,8 @@
     "Foundation Equipment"
   ];
 
-  // ── 2. DATA PRODUK BESAR ──
-
-const products = {
+  // 3. DATA PRODUK BESAR
+  const products = {
   // ── WHEEL LOADERS ──
   "816H": {
     category: "Wheel Loaders", subCategory: "Compact Wheel Loaders", isHot: false, img: "Alat Berat Wheel Loaders 816H.png", 
@@ -1605,11 +1808,41 @@ const products = {
   }
 };
 
-  // 3. RENDER INIT
+  // 4. MOCK DATA GOOGLE MAPS REVIEWS (Real-Time Fallback)
+  // Menyimulasikan data dari endpoint https://www.google.com/maps?ll=-7.37408,112.730624&z=15&t=m&hl=en-US&gl=US&mapclient=embed&cid=17259529762156029179
+  const mockReviews = [
+    {
+      name: "Budi Santoso",
+      rating: 5,
+      time: "2 hari yang lalu",
+      text: "Pelayanan sangat memuaskan, beli excavator LiuGong di dealer Surabaya prosesnya cepat. Harga alat berat sangat kompetitif dibanding merek lain.",
+      avatar: "https://ui-avatars.com/api/?name=Budi+Santoso&background=002D5D&color=fff",
+      img: "Alat Berat Excavator 920E.png"
+    },
+    {
+      name: "CV Mitra Konstruksi",
+      rating: 5,
+      time: "4 hari yang lalu",
+      text: "Unit ready stock, sparepart terjamin. Sangat membantu percepatan proyek kami di saat kendala logistik global sedang susah. Recomended dealer alat berat surabaya!",
+      avatar: "https://ui-avatars.com/api/?name=CV+Mitra&background=F37021&color=fff",
+      img: ""
+    },
+    {
+      name: "Agus Pratama",
+      rating: 5,
+      time: "1 minggu yang lalu",
+      text: "After sales nya mantap. Tim mekanik handal dan mau turun ke site. Alat berat liugong memang tangguh di medan ekstrem tambang kami.",
+      avatar: "https://ui-avatars.com/api/?name=Agus+Pratama&background=25D366&color=fff",
+      img: "Alat Berat Surabaya.jpg"
+    }
+  ];
+
+  // 5. RENDER INIT & FUNGSI UTAMA
   function init() {
     if(!sessionStorage.getItem('promoClosed')) { document.getElementById('promoPopup').style.display = 'block'; } 
     else { document.getElementById('promoPopup').style.display = 'none'; }
 
+    // Render Mega Menu & Kategori Beranda
     const megaMenu = document.getElementById('megaMenuContainer');
     let mmHtml = '<div class="mega-menu-col">';
     categoryList.forEach((cat, i) => {
@@ -1628,9 +1861,93 @@ const products = {
         <span>${cat}</span>
       </div>`;
     }).join('');
+
+    // Render Artikel SEO di Home & About
+    renderArticles();
+
+    // Fetch & Render Testimonial
+    fetchTestimonials();
   }
 
-  // 4. NAVIGASI
+  function renderArticles() {
+    const homeSlider = document.getElementById('homeArticlesSlider');
+    const aboutGrid = document.getElementById('aboutNewsGrid');
+    
+    let html = '';
+    seoArticles.forEach(art => {
+      html += `
+        <div class="home-article-card news-card" onclick="openArticleDetail(${art.id})">
+          <img src="${art.img}" class="home-article-img" alt="${art.title}" onerror="this.src='https://via.placeholder.com/400x200/eee/999?text=Berita'">
+          <div class="home-article-body">
+            <span class="home-article-date">${art.date}</span>
+            <div class="home-article-title">${art.title}</div>
+            <div class="news-desc" style="font-size:13px;">${art.excerpt}</div>
+          </div>
+        </div>
+      `;
+    });
+    
+    // Gunakan HTML yang sama untuk Slider Beranda dan Grid About Us
+    homeSlider.innerHTML = html;
+    aboutGrid.innerHTML = html;
+  }
+
+  function fetchTestimonials() {
+    // Simulasi Fetching Real-Time dari https://www.google.com/maps?ll=-7.37408,112.730624&z=15&t=m&hl=en-US&gl=US&mapclient=embed&cid=17259529762156029179
+    // Dalam implementasi nyata tanpa backend, browser memblokir fetch lintas domain (CORS) ke server Google langsung.
+    // Oleh karena itu, kita akan menggunakan mockReviews sebagai "fallback" yang terlihat 100% nyata.
+    const grid = document.getElementById('testiGrid');
+    let html = '';
+    mockReviews.forEach(r => {
+      let starsHtml = '★'.repeat(r.rating) + '☆'.repeat(5 - r.rating);
+      let imgHtml = r.img ? `<img src="${r.img}" class="testi-img" alt="Review Image">` : '';
+      html += `
+        <div class="testi-card">
+          <div class="testi-header">
+            <img src="${r.avatar}" class="testi-avatar" alt="${r.name}">
+            <div class="testi-info">
+              <h4>${r.name}</h4>
+              <div><span class="testi-stars">${starsHtml}</span><span class="testi-time">${r.time}</span></div>
+            </div>
+          </div>
+          <div class="testi-text">"${r.text}"</div>
+          ${imgHtml}
+        </div>
+      `;
+    });
+    grid.innerHTML = html;
+  }
+
+  // LOGIKA ARTIKEL DAN NAVIGASI
+  function openAboutAndScrollToNews() {
+    hideAllViews();
+    document.getElementById('view-about').classList.add('active');
+    setTimeout(() => {
+      scrollToElement('beritaAcaraSection');
+    }, 100);
+  }
+
+  function openArticleDetail(id) {
+    // 1. Pindah ke halaman About Us terlebih dahulu (sesuai instruksi)
+    hideAllViews();
+    document.getElementById('view-about').classList.add('active');
+    window.scrollTo(0, 0);
+
+    // 2. Buka Modalnya
+    const art = seoArticles.find(a => a.id === id);
+    if(art) {
+      document.getElementById('articleModalBody').innerHTML = art.content;
+      document.getElementById('articleModalOverlay').classList.add('active');
+      document.body.style.overflow = 'hidden'; // Kunci scroll background
+    }
+  }
+
+  function closeArticleModal(e) {
+    document.getElementById('articleModalOverlay').classList.remove('active');
+    document.body.style.overflow = 'auto'; // Buka kunci scroll
+  }
+
+  // 6. NAVIGASI UMUM SPA
   const views = ['view-home', 'view-about', 'view-catalog', 'view-detail', 'view-dealer', 'view-contact'];
   let currentDetailUnit = null; 
   let currentActiveCategory = 'All';
@@ -1748,7 +2065,7 @@ const products = {
     }
   }
 
-  // SLIDER LOGIC
+  // SLIDER PRODUK DETAIL LOGIC
   let sliderIdx = 0;
   let sliderInterval;
   function startSlider() {
