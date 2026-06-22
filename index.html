@@ -585,42 +585,92 @@
         </div>
       </div>
 
-      <div style="margin-bottom: 100px;">
+<div style="margin-bottom: 100px;">
         <div style="text-align: center;">
           <div class="section-label">Value Proposition</div>
-          <h2 style="font-size:36px; font-weight:900; color:var(--lg-navy); margin-bottom:15px;">Mengapa Memilih LiuGong Surabaya?</h2>
-          <p style="color:var(--muted); max-width: 700px; margin: 0 auto 10px; font-size:16px;">Dibandingkan kompetitor, kami memberikan nilai investasi yang jauh lebih pasti untuk armada alat berat Anda melalui pilar-pilar pelayanan berikut:</p>
+          <h2 style="font-size:36px; font-weight:900; color:var(--lg-navy); margin-bottom:15px;">Perbandingan Spesifikasi Kelas 20 Ton</h2>
+          <p style="color:var(--muted); max-width: 800px; margin: 0 auto 30px; font-size:16px;">Unit LiuGong 922E terbukti lebih unggul dalam segi kapasitas tonase, tenaga mesin, dan efisiensi hidrolik dibandingkan para kompetitor di kelasnya.</p>
         </div>
         
-        <div class="advantage-grid">
-          <div class="adv-card">
-            <div class="adv-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-            </div>
-            <h4>Respon Servis Tercepat</h4>
-            <p>Tim mekanik on-site kami siaga meluncur ke lokasi proyek Anda dalam waktu kurang dari 24 jam untuk meminimalisir downtime alat berat.</p>
-          </div>
-          <div class="adv-card">
-            <div class="adv-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-            </div>
-            <h4>Ready Stock Sparepart</h4>
-            <p>Gudang kami di Sidoarjo menyimpan ribuan item fast-moving dan slow-moving spareparts, menjamin alat Anda tidak akan mangkrak berminggu-minggu.</p>
-          </div>
-          <div class="adv-card">
-            <div class="adv-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            </div>
-            <h4>Garansi Super Menguntungkan</h4>
-            <p>Nikmati garansi hingga 2 Tahun / 4000 Jam Kerja. Dapatkan juga benefit Free Service dan Free Sparepart hingga 4 kali di masa awal pembelian.</p>
-          </div>
-          <div class="adv-card">
-            <div class="adv-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-            </div>
-            <h4>Harga Sangat Kompetitif</h4>
-            <p>Spesifikasi mesin setara kelas Eropa dan Jepang, namun dengan nilai Total Cost of Ownership (TCO) dan harga beli yang jauh lebih rasional dan ekonomis.</p>
-          </div>
+        <style>
+          .compare-table { width: 100%; border-collapse: collapse; box-shadow: 0 15px 40px rgba(0,0,0,0.06); border-radius: 12px; overflow: hidden; background: white; margin-bottom: 40px;}
+          .compare-table th, .compare-table td { padding: 18px 20px; text-align: center; border-bottom: 1px solid var(--border); }
+          .compare-table th { background: var(--lg-navy); color: white; font-weight: 800; font-size: 15px; }
+          .compare-table th:first-child, .compare-table td:first-child { text-align: left; background: var(--bg-gray); color: var(--lg-navy); font-weight: 700; width: 25%;}
+          .compare-table td { font-size: 15px; color: var(--dark); font-weight: 500;}
+          .compare-table .highlight-col { background: rgba(243, 112, 33, 0.05); color: var(--lg-orange); font-weight: 800; border-left: 2px solid rgba(243, 112, 33, 0.2); border-right: 2px solid rgba(243, 112, 33, 0.2);}
+          .compare-table tr:hover td { background: #fdfdfd; }
+          .compare-table tr:hover .highlight-col { background: rgba(243, 112, 33, 0.08); }
+          .compare-table tr:last-child td { border-bottom: none; }
+        </style>
+
+        <div style="overflow-x: auto;">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>PARAMETER</th>
+                <th style="border-bottom: 4px solid var(--lg-orange);">UNIT LIUGONG<br><span style="font-size: 13px; font-weight: 600; color: #ffcbab;">922E</span></th>
+                <th>UNIT SANY<br><span style="font-size: 13px; font-weight: 600; color: #a1b5cc;">SY215C</span></th>
+                <th>UNIT KOMATSU<br><span style="font-size: 13px; font-weight: 600; color: #a1b5cc;">PC200-8M0</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Kelas / Tonase (Ton)</td>
+                <td class="highlight-col">22,57</td>
+                <td>21,5</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td>Operating Weight (Kg)</td>
+                <td class="highlight-col">22.570</td>
+                <td>21.900</td>
+                <td>20.500</td>
+              </tr>
+              <tr>
+                <td>Tenaga Mesin (HP)</td>
+                <td class="highlight-col">166</td>
+                <td>158</td>
+                <td>147</td>
+              </tr>
+              <tr>
+                <td>Kapasitas (m³)</td>
+                <td class="highlight-col">1</td>
+                <td>0,93</td>
+                <td>0,93</td>
+              </tr>
+              <tr>
+                <td>Merek Mesin</td>
+                <td class="highlight-col">Cummins</td>
+                <td>Mitsubishi</td>
+                <td>Komatsu</td>
+              </tr>
+              <tr>
+                <td>Engine Model</td>
+                <td class="highlight-col">Cummins QSB7</td>
+                <td>4M50-TL</td>
+                <td>SAA6D107E-1</td>
+              </tr>
+              <tr>
+                <td>Emission / Sistem BBM</td>
+                <td class="highlight-col">Tier 3 (Common Rail)</td>
+                <td>Tier 3 (Common Rail)</td>
+                <td>Tier 3 (Common Rail)</td>
+              </tr>
+              <tr>
+                <td>Main Pump</td>
+                <td class="highlight-col">2 Variable displacement piston pumps</td>
+                <td>2 Variable Piston</td>
+                <td>1 Variable Piston</td>
+              </tr>
+              <tr>
+                <td>Blade</td>
+                <td class="highlight-col">-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
 
@@ -846,14 +896,13 @@
           <div class="form-instruction" style="margin: 20px 0 10px; font-weight:700; color:var(--dark);">Kelengkapan Berkas:</div>
           
           <div class="input-group">
-            <label style="display:block; margin-bottom:8px; font-size:14px; font-weight:600; color: var(--lg-navy);">1. Upload CV (Wajib - Maks 5MB)*</label>
-            <input type="file" id="i_cv_file" accept=".pdf,.doc,.docx" required style="padding: 10px; background: white;">
+            <label style="display:block; margin-bottom:8px; font-size:14px; font-weight:600; color: var(--lg-navy);">1. Link CV / Resume (Wajib)*</label>
+            <input type="text" id="i_cv_link" placeholder="Tautkan Link (Google Drive / DropBox) atau ketik 'Kirim via WhatsApp'" required>
           </div>
           
           <div class="input-group" style="margin-top:20px;">
-            <label style="display:block; margin-bottom:8px; font-size:14px; font-weight:600; color: var(--lg-navy);">2. Portofolio (Opsional - Masukkan Link atau Upload File)</label>
-            <input type="url" id="i_porto_link" placeholder="Link Portofolio (G-Drive / Behance / dll)">
-            <input type="file" id="i_porto_file" accept=".pdf,.jpg,.png" style="padding: 10px; background: white; margin-top: 8px;">
+            <label style="display:block; margin-bottom:8px; font-size:14px; font-weight:600; color: var(--lg-navy);">2. Link Portofolio (Opsional)</label>
+            <input type="text" id="i_porto_link" placeholder="Tautkan Link Portofolio, Behance, atau ketik 'Kirim via WhatsApp'">
           </div>
 
           <div class="input-group" style="margin-top: 20px;">
@@ -3199,25 +3248,20 @@
   }
 
   // FUNGSI UPDATE PENGIRIMAN INTERNSHIP KE WHATSAPP MENYERTAKAN INFO FILE MANUALLY
-  function sendInternshipToWA(e) {
+ function sendInternshipToWA(e) {
     e.preventDefault();
     const name = document.getElementById('i_name').value;
     const uni = document.getElementById('i_uni').value;
     const sem = document.getElementById('i_sem').value;
     const phone = document.getElementById('i_phone').value;
     
-    const cvFile = document.getElementById('i_cv_file').files[0];
+    const cvLink = document.getElementById('i_cv_link').value;
     const portoLink = document.getElementById('i_porto_link').value || '-';
-    const portoFile = document.getElementById('i_porto_file').files[0];
     const msg = document.getElementById('i_msg').value;
 
-    let cvText = cvFile ? `[File CV akan dilampirkan secara manual pada chat ini]` : `[TIDAK ADA CV]`;
-    let portoText = portoLink !== '-' ? portoLink : (portoFile ? `[File Portofolio akan dilampirkan secara manual pada chat ini]` : '-');
-
-    const waMsg = `Halo Tim Rekrutmen, saya tertarik untuk melamar posisi magang (Internship) di LiuGong Surabaya.\n\n*DATA DIRI:*\nNama: ${name}\nUniversitas/Jurusan: ${uni}\nSemester: ${sem}\nNo. WhatsApp: ${phone}\n\n*DOKUMEN LAMARAN:*\nCV: ${cvText}\nPortofolio: ${portoText}\n\n*MOTIVASI BERGABUNG:*\n${msg}\n\n*(Catatan: Saya akan melampirkan berkas file langsung di chat ini setelah pesan ini terkirim)*`;
+    const waMsg = `Halo Tim Rekrutmen, saya tertarik untuk melamar posisi magang (Internship) di LiuGong Surabaya.\n\n*DATA DIRI:*\nNama: ${name}\nUniversitas/Jurusan: ${uni}\nSemester: ${sem}\nNo. WhatsApp: ${phone}\n\n*DOKUMEN LAMARAN:*\nCV: ${cvLink}\nPortofolio: ${portoLink}\n\n*MOTIVASI BERGABUNG:*\n${msg}\n\n*(Catatan: Apabila tautan belum dapat diakses, saya akan melampirkan berkas file langsung di chat ini setelah pesan ini terkirim)*`;
     
-    // Memberikan alert instruksi untuk melampirkan file di WA
-    alert("PENTING: Browser tidak dapat mengunggah file langsung ke WhatsApp secara otomatis. Mohon jangan lupa untuk melampirkan file (klik tombol penjepit kertas) CV / Portofolio Anda di ruang obrolan WhatsApp yang akan terbuka sesaat lagi.");
+    alert("Pendaftaran akan diarahkan ke WhatsApp. Jika Anda memilih untuk mengirim file langsung, mohon lampirkan file (klik icon + / penjepit kertas) dokumen CV & Portofolio Anda di ruang obrolan WhatsApp yang akan terbuka sesaat lagi.");
     
     window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(waMsg)}`, '_blank');
   }
