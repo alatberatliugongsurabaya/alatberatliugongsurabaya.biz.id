@@ -185,6 +185,20 @@
     .group-card:hover img { transform: scale(1.08); }
     .group-card span { display: block; font-size: 16px; font-weight: 800; color: var(--lg-navy); text-transform: uppercase; letter-spacing: 0.5px;}
 
+    /* ── MITRA & PARTNERS MARQUEE ── */
+    .partners-section { padding: 80px 0; background: #ffffff; overflow: hidden; border-top: 1px solid var(--border); }
+    .partners-header { text-align: center; margin-bottom: 40px; }
+    .partners-header h2 { font-size: 32px; font-weight: 900; color: var(--lg-navy); text-transform: uppercase; }
+    .marquee-wrapper { position: relative; width: 100%; overflow: hidden; display: flex; align-items: center; margin-bottom: 50px; }
+    .marquee-wrapper::before, .marquee-wrapper::after { content: ''; position: absolute; top: 0; width: 150px; height: 100%; z-index: 2; pointer-events: none; }
+    .marquee-wrapper::before { left: 0; background: linear-gradient(to right, #ffffff, transparent); }
+    .marquee-wrapper::after { right: 0; background: linear-gradient(to left, #ffffff, transparent); }
+    .marquee-track { display: flex; gap: 50px; padding-right: 50px; animation: scroll-marquee 80s linear infinite; width: max-content; }
+    .marquee-track:hover { animation-play-state: paused; }
+    .partner-logo { height: 70px; width: 180px; object-fit: contain; filter: grayscale(100%); opacity: 0.6; transition: all 0.3s ease; flex-shrink: 0; }
+    .partner-logo:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.05); }
+    @keyframes scroll-marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
     /* ========================================= VIEW 2: TENTANG KAMI DEALER LIUGONG SURABAYA ========================================= */
     .about-content-section { padding: 80px 0; max-width: 1150px; margin: 0 auto; }
     .about-vid-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; margin-bottom: 100px;}
@@ -500,6 +514,26 @@
           <p style="color:var(--muted); max-width: 600px; margin: 0 auto; font-size:16px;">Diambil secara real-time dari ulasan otentik pelanggan kami yang telah merasakan langsung ketangguhan alat berat LiuGong Surabaya.</p>
         </div>
         <div class="testi-slider" id="testiSlider"></div>
+      </div>
+    </section>
+
+    <section class="partners-section">
+      <div class="container">
+        
+        <div class="partners-header">
+          <h2>Company Partners</h2>
+        </div>
+        <div class="marquee-wrapper">
+          <div class="marquee-track" id="companyPartnersTrack"></div>
+        </div>
+
+        <div class="partners-header" style="margin-top: 60px;">
+          <h2>Leasing Partners</h2>
+        </div>
+        <div class="marquee-wrapper">
+          <div class="marquee-track" id="leasingPartnersTrack"></div>
+        </div>
+
       </div>
     </section>
 
@@ -1933,7 +1967,7 @@
 
   },
 
- 
+  
 
   // ── MOTOR GRADERS ──
 
@@ -2906,6 +2940,22 @@
     }
   ];
 
+  const companyPartners = ["PT Sinar Mas", "PT Asian Agri", "PT Musim Mas", "PT Indocement Tunggal Prakarsa", "PT Dharma Henwa", "PT Dexin Steel Indonesia", "PT Biringkassi Raya", "PT Petrokopindo Cipta Selaras", "PT Road Technology Indonesia", "PT CIMB Niaga", "PT Andamas Global Energi", "PT Anugerah Energi Kalimantan", "PT Anugerah Group", "PT Bangun Mineral Sejahtera", "PT Berseri Makmur Indonesia", "PT Bima Abadi Sentosa", "PT Bumi Daya Kencana", "PT Bumi Pasir Mandiri", "PT Cidata Mining", "PT Deli Pratama Coal", "PT Fortuna Marina Sejahtera", "PT Global Energi Makmur", "PT Global Indonesia Asia Sejahtera", "PT Golden Blossom Sumatra", "PT Honest Trans Sejahtera", "PT Indo Heavy Equipment", "PT KPN Group", "PT Lima Multi Perkasa", "PT Maharani Sukses Abadi", "PT Monggo Makmur Bersama", "PT Multi Karya Sugema", "PT Mutual Reality Investment", "PT Partindo Teknik", "PT Pilar Rekayasa Mandiri", "PT Pondok Hijau Energi", "PT Prima Inti Kapuas", "PT Ratu Intan Mining", "PT Samulos Rambuti Makmur", "PT Sarana Anugrah Nusantama", "PT Subur Sedaya Maju", "PT Sumber Daya Energi", "PT Sumber Energi Alam Lestari", "PT Sumber Mandiri Abadi", "PT Swadaya Graha", "PT Teknik Jaya Abadi", "PT Trikarya Multi Sentosa", "PT Tunas Jaya Persada", "PT U-Coal Group", "PT Vanguard Energy Group", "PT Wahana Logindo Services", "PT Aneka Jasa Sorowako", "PT Angkiet", "PT Asta Rekayasa Unggul", "PT Berkah Karya Mansyur", "PT Cahaya Riau Mandiri", "PT Cahaya Saga Utama", "PT Central Jaya", "PT Daya Mitra Sejati", "PT Dok Perkapalan Gandasari", "PT Huaian", "PT Husni Thamrin Kerinci", "PT Huthama Group", "PT Ichiko Agro Lestari", "PT JSI Group", "PT Kirana Megantara", "PT Kitara Jaya Persada", "PT Padaidi Gemilang Sakti", "PT Plaosan Jaya Abadi", "PT Purwo Bakti Pertiwi", "PT Sarana Andalan Nusantara", "PT Tiga Putri Bersaudara", "PT Karya Jaya Adiwangsa", "PT Belengkong Mineral Resources", "PT Permata Intan Kapuas", "PT Rajawali Emas Ancora Lestari", "PT Kasih Investama", "PT Aneka Sumatrindo", "PT Prima Nusantara Tekindo", "PT Rimba Karya Mandiri", "CV Gratia Megamas"];
+  
+  const leasingPartners = ["BCA", "BNI", "BRI", "BSI", "Bank BTPN", "Bank Jatim", "Bank Mega", "Bank Nano", "Bank Neo Commerce", "Bank Permata", "Bank Sahabat Sampoerna", "CIMB Niaga", "Maybank", "BPR Bali", "BPR Makassar", "ACC Finance", "Adira Finance", "Akulaku Finance", "Asia Finance", "BFI Finance", "BOT Finance", "Buana Finance", "Chailish Finance", "Clipan Finance", "Clemont Finance", "CSUL Finance", "Dipo Finance", "ECA Finance", "Equity Finance", "IFS Finance", "IMFI Finance", "J Bank Finance", "LFI Finance", "Mandiri Tunas Finance", "Mitsui Finance", "MNC Finance", "MPM Finance", "Muli Finance", "Orix Finance", "Radana Finance", "Resona Finance", "SANF Finance", "Satya Dika Finance", "Shinhan Finance", "SKBF Finance", "Smart Finance", "SMFL Finance", "SMS Finance", "TIFA Finance", "Topas Finance", "Trust Finance", "WOM Finance", "Wuling Finance"];
+
+  function renderPartnersLogos() {
+    const companyTrack = document.getElementById('companyPartnersTrack');
+    const leasingTrack = document.getElementById('leasingPartnersTrack');
+
+    const generateHtml = (arr) => arr.map(name => 
+      `<img src="${name}.jpg" alt="${name}" title="${name}" class="partner-logo" onerror="this.src='https://via.placeholder.com/180x70/F8F9FA/04254A?text=${encodeURIComponent(name)}'">`
+    ).join('');
+
+    if (companyTrack) companyTrack.innerHTML = generateHtml(companyPartners) + generateHtml(companyPartners);
+    if (leasingTrack) leasingTrack.innerHTML = generateHtml(leasingPartners) + generateHtml(leasingPartners);
+  }
+
   // ==========================================
   // 4. RENDER INIT & FUNGSI UTAMA
   // ==========================================
@@ -2935,6 +2985,7 @@
 
     renderArticles();
     fetchTestimonials();
+    renderPartnersLogos();
   }
 
   function renderArticles() {
@@ -3136,8 +3187,6 @@
 
       section.querySelectorAll('.product-card').forEach(card => {
         const cType = card.getAttribute('data-subcat');
-        const cSize = card.getAttribute('data-size');
-        
         const typeMatch = typeCBs.length === 0 || typeCBs.includes(cType);
         const sizeMatch = sizeCBs.length === 0 || sizeCBs.includes(cSize);
 
