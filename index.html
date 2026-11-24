@@ -244,7 +244,10 @@
     .partner-section.bg-gray .marquee-wrapper::before { background: linear-gradient(to right, var(--bg-gray) 0%, rgba(248,249,250,0) 100%); }
     .partner-section.bg-gray .marquee-wrapper::after { background: linear-gradient(to left, var(--bg-gray) 0%, rgba(248,249,250,0) 100%); }
 
-    .marquee-track { display: inline-flex; align-items: center; animation: scrollMarquee 150s linear infinite; }
+    .marquee-track { display: inline-flex; align-items: center; flex-shrink: 0; will-change: transform; animation: none !important; }
+    .marquee-wrapper { cursor: grab; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+    .marquee-wrapper:active { cursor: grabbing; }
+    .marquee-wrapper img { -webkit-user-drag: none; user-drag: none; }
     .marquee-track:hover { animation-play-state: paused; }
     
     .marquee-item { display: inline-flex; align-items: center; justify-content: center; padding: 0 40px; }
@@ -510,8 +513,8 @@
 
     /* ── Hero beranda ── */
     .hero-bg { opacity: .6; }
-    .hero .hero-overlay { background: linear-gradient(135deg, rgba(2,26,53,.93) 0%, rgba(4,37,74,.74) 55%, rgba(243,112,33,.30) 100%) !important; }
-    .hero::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 140px; background: linear-gradient(to top, rgba(2,26,53,.55), transparent); pointer-events: none; z-index: 1; }
+    .hero .hero-overlay { background: linear-gradient(135deg, rgba(14,14,14,.82) 0%, rgba(20,20,20,.58) 55%, rgba(243,112,33,.32) 100%) !important; }
+    .hero::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 140px; background: linear-gradient(to top, rgba(0,0,0,.5), transparent); pointer-events: none; z-index: 1; }
     .hero-content > * { opacity: 0; animation: heroRise .9s var(--ease) forwards; }
     .hero-content > *:nth-child(1) { animation-delay: .05s; }
     .hero-content > *:nth-child(2) { animation-delay: .18s; }
@@ -558,9 +561,12 @@
     /* ── Mitra (marquee) ── */
     .partner-section h2 { position: relative; padding-bottom: 14px; letter-spacing: .5px; }
     .partner-section h2::after { content: ''; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 60px; height: 4px; border-radius: 4px; background: var(--grad-orange); }
-    .marquee-item { padding: 0 14px; }
-    .marquee-item img { height: 68px; background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 8px 18px; box-shadow: var(--shadow-sm); }
-    .marquee-item img:hover { box-shadow: var(--shadow-md); }
+    .marquee-item { padding: 0 10px; }
+    .partner-pill { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 12px 28px; border: 2px solid rgba(4,37,74,.22); border-radius: 50px; background: #fff; color: var(--lg-navy); font-size: 15px; font-weight: 700; white-space: nowrap; box-shadow: var(--shadow-sm); transition: all .3s var(--ease); cursor: default; }
+    .partner-pill:hover { border-color: var(--lg-orange); color: var(--lg-orange); transform: translateY(-3px); box-shadow: 0 10px 22px rgba(243,112,33,.20); }
+    .partner-pill.has-logo { padding: 8px 24px; }
+    .partner-pill.has-logo span { display: none; }
+    .partner-pill img, .partner-pill img:hover { height: 44px; max-width: 150px; background: none; border: none; border-radius: 0; padding: 0; box-shadow: none; transform: none; }
 
     /* ── Kategori produk (beranda) ── */
     .group-card { border-radius: 20px; padding: 28px 18px 24px; position: relative; overflow: hidden; background: linear-gradient(180deg, #fff, #fafbfc); box-shadow: var(--shadow-sm); }
@@ -689,8 +695,7 @@
       .warranty-box { margin: 40px auto; }
     }
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
-      .marquee-track { animation: none !important; }
+      *:not(.marquee-track), *:not(.marquee-track)::before, *:not(.marquee-track)::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
     }
   </style>
 </head>
@@ -867,7 +872,7 @@
         <h2>Mitra Pembiayaan / Leasing</h2>
       </div>
       <div class="marquee-wrapper">
-        <div class="marquee-track" id="leasingPartnersTrack" style="animation-duration: 100s;"></div>
+        <div class="marquee-track" id="leasingPartnersTrack" style="animation-duration: 80s;"></div>
       </div>
     </section>
 
@@ -2658,6 +2663,28 @@
     renderPartners(); // Generate slider logo
   }
   
+  function startMarquee(track, speed) {
+    if (!track) return;
+    const wrap = track.parentElement;
+    let x = 0, last = performance.now(), hover = false, dragging = false, startX = 0, startPos = 0;
+    function tick(now) {
+      const dt = Math.min((now - last) / 1000, 0.1); last = now;
+      if (track.offsetParent !== null) {
+        if (!hover && !dragging) x -= speed * dt;
+        const h = track.offsetWidth / 2;
+        if (h > 0) { while (x <= -h) x += h; while (x > 0) x -= h; }
+        track.style.transform = 'translate3d(' + x + 'px,0,0)';
+      }
+      requestAnimationFrame(tick);
+    }
+    wrap.addEventListener('mouseenter', () => { hover = true; });
+    wrap.addEventListener('mouseleave', () => { hover = false; });
+    wrap.addEventListener('pointerdown', e => { dragging = true; startX = e.clientX; startPos = x; try { wrap.setPointerCapture(e.pointerId); } catch (err) {} });
+    wrap.addEventListener('pointermove', e => { if (dragging) x = startPos + (e.clientX - startX); });
+    ['pointerup', 'pointercancel'].forEach(ev => wrap.addEventListener(ev, () => { dragging = false; }));
+    requestAnimationFrame(tick);
+  }
+
   function renderPartners() {
     const compTrack = document.getElementById('companyPartnersTrack');
     const leasTrack = document.getElementById('leasingPartnersTrack');
@@ -2665,8 +2692,7 @@
     // Fungsi pembantu untuk membuat daftar logo dan menduplikasinya agar loop tak terbatas
     const buildMarqueeHTML = (partnersArray) => {
       const itemsHTML = partnersArray.map(name => {
-        return `<div class="marquee-item"><img src
-        ="${name}.jpg" alt="${name}" title="${name}" onerror="this.src='https://via.placeholder.com/180x60/f8f9fa/6b6b6b?text=${name.replace(/\s+/g, '+')}'"></div>`;
+        return `<div class="marquee-item"><div class="partner-pill"><img src="${name}.jpg" alt="${name}" loading="lazy" onload="this.parentNode.classList.add('has-logo')" onerror="this.remove()"><span>${name}</span></div></div>`;
       }).join('');
       
       // Menggandakan item agar animasi marquee berjalan seamless (tanpa putus)
@@ -2675,6 +2701,8 @@
 
     if (compTrack) compTrack.innerHTML = buildMarqueeHTML(companyPartners);
     if (leasTrack) leasTrack.innerHTML = buildMarqueeHTML(leasingPartners);
+    startMarquee(compTrack, 60);
+    startMarquee(leasTrack, 50);
   }
 
   function renderArticles() {
