@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="yz3L8PONn11HC_v3" />
+  <meta name="theme-color" content="#04254A" />
   <title>Liugong: Alat Berat Surabaya - Dealer Resmi Alat Berat LiuGong Surabaya</title>
   <meta name="description" content="Liugong: Alat Berat Surabaya - Dealer Resmi Alat Berat LiuGong Surabaya. Excavator, wheel loader, motor grader, & alat berat lainnya. Garansi resmi & service profesional.">
   <meta name="keywords" id="meta-keywords" content="Liugong | Dealer Resmi LiuGong Surabaya Indonesia | Alat Berat, LiuGong Loader, LiuGong Excavator, LiuGong Indonesia, Excavator, Alat Berat Excavator, Harga Alat Berat">
@@ -437,12 +438,266 @@
       .warranty-list { grid-template-columns: 1fr; }
       .modern-form-card { padding: 30px 20px; }
     }
+
+    /* ═════════════════════════════════════════════════════════════
+       UI POLISH V2 — lapisan penyempurnaan tampilan (override)
+       ═════════════════════════════════════════════════════════════ */
+    :root {
+      --lg-navy-2: #0a3d78;
+      --lg-navy-dark: #021a35;
+      --lg-orange-light: #ff8a3d;
+      --shadow-sm: 0 2px 10px rgba(4,37,74,.06);
+      --shadow-md: 0 12px 32px rgba(4,37,74,.10);
+      --shadow-lg: 0 26px 60px rgba(4,37,74,.18);
+      --grad-orange: linear-gradient(135deg, #ff8a3d 0%, #F37021 55%, #e45a0f 100%);
+      --grad-green: linear-gradient(135deg, #2be077 0%, #25D366 60%, #1db954 100%);
+      --grad-navy: linear-gradient(135deg, #021a35 0%, #04254A 55%, #0a3d78 100%);
+      --ease: cubic-bezier(.22,.8,.3,1);
+    }
+    body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
+    ::selection { background: var(--lg-orange); color: #fff; }
+    :focus-visible { outline: 3px solid rgba(243,112,33,.55); outline-offset: 3px; border-radius: 4px; }
+    img { max-width: 100%; }
+
+    /* ── Popup promo ── */
+    #promoPopup { border-top: none; border-radius: 18px; padding: 22px 22px 20px; width: 330px; overflow: hidden; border: 1px solid rgba(4,37,74,.08); box-shadow: var(--shadow-lg); }
+    #promoPopup::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: var(--grad-orange); }
+    .promo-close { width: 28px; height: 28px; border-radius: 50%; font-size: 14px; line-height: 28px; text-align: center; background: var(--bg-gray); transition: .2s; }
+    .promo-close:hover { background: var(--lg-orange); color: #fff; }
+    .promo-title::before { content: '🔥 '; }
+    .promo-title { padding-right: 24px; }
+    .promo-btn { background: var(--grad-green); border-radius: 50px; padding: 12px; box-shadow: 0 8px 20px rgba(37,211,102,.30); transition: .25s; }
+    .promo-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(37,211,102,.42); }
+
+    /* ── Navbar ── */
+    #navbar { background: rgba(255,255,255,.88); -webkit-backdrop-filter: saturate(180%) blur(14px); backdrop-filter: saturate(180%) blur(14px); box-shadow: 0 1px 0 rgba(4,37,74,.07); }
+    #navbar.scrolled { height: 68px; background: rgba(255,255,255,.96); box-shadow: 0 10px 34px rgba(4,37,74,.12); }
+    .nav-brand img { transition: transform .3s var(--ease); }
+    .nav-brand:hover img { transform: rotate(-6deg) scale(1.06); }
+    .nav-brand-text { background: linear-gradient(135deg, var(--lg-navy), var(--lg-navy-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .nav-links > li > a { position: relative; height: 100%; display: flex; align-items: center; }
+    .nav-links > li > a::after { content: ''; position: absolute; left: 16px; right: 16px; bottom: 16px; height: 3px; border-radius: 3px; background: var(--lg-orange); transform: scaleX(0); transform-origin: left; transition: transform .3s var(--ease); }
+    .nav-links > li:hover > a::after { transform: scaleX(1); }
+    .mega-menu { top: 100%; border-radius: 0 0 16px 16px; border-top: 4px solid var(--lg-orange); box-shadow: var(--shadow-lg); animation: megaIn .25s var(--ease); }
+    @keyframes megaIn { from { opacity: 0; transform: translateX(-50%) translateY(8px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+    .mega-menu a { transition: all .2s; }
+    .mega-menu a:hover { padding-left: 18px; background: rgba(243,112,33,.08); }
+    .nav-wa-btn { background: var(--grad-green); box-shadow: 0 6px 16px rgba(37,211,102,.28); }
+    .hamburger span { background: var(--lg-navy); }
+    .hamburger:hover span { background: var(--lg-orange); }
+    @media (min-width: 1025px) { .hamburger { display: none; } }
+
+    .mobile-sidebar { border-radius: 20px 0 0 20px; }
+    .mobile-sidebar a { transition: all .2s; }
+    .mobile-sidebar a:hover { padding-left: 8px; }
+
+    /* ── Banner halaman & breadcrumb ── */
+    .page-banner { height: 280px; background: var(--grad-navy); }
+    .page-banner::before { opacity: .22; }
+    .page-banner::after { content: ''; position: absolute; inset: 0; background: radial-gradient(620px 240px at 88% 125%, rgba(243,112,33,.38), transparent 70%); pointer-events: none; }
+    .page-banner h1 { font-size: clamp(28px, 5vw, 52px); border-bottom: none; padding-bottom: 20px; text-shadow: 0 4px 24px rgba(0,0,0,.35); }
+    .page-banner h1::after { content: ''; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 90px; height: 5px; border-radius: 5px; background: var(--grad-orange); }
+    .hero-breadcrumb { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.14); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); padding: 8px 16px; border-radius: 50px; flex-wrap: wrap; max-width: calc(100% - 60px); }
+
+    /* ── Tombol ── */
+    .btn-primary { background: var(--grad-orange); box-shadow: 0 8px 22px rgba(243,112,33,.35); }
+    .btn-primary:hover { background: var(--grad-orange); filter: brightness(1.06); box-shadow: 0 14px 30px rgba(243,112,33,.45); }
+    .btn-wa-green { background: var(--grad-green); box-shadow: 0 8px 22px rgba(37,211,102,.32); }
+    .btn-send { background: var(--grad-orange); border-radius: 12px; box-shadow: 0 8px 22px rgba(243,112,33,.30); }
+    .btn-send:hover { background: var(--grad-orange); filter: brightness(1.06); }
+    .btn-info { background: var(--grad-orange); box-shadow: 0 6px 16px rgba(243,112,33,.35); }
+    .btn-info:hover { background: var(--grad-orange); filter: brightness(1.08); transform: translateY(-2px); }
+
+    /* ── Hero beranda ── */
+    .hero-bg { opacity: .6; }
+    .hero .hero-overlay { background: linear-gradient(135deg, rgba(2,26,53,.93) 0%, rgba(4,37,74,.74) 55%, rgba(243,112,33,.30) 100%) !important; }
+    .hero::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 140px; background: linear-gradient(to top, rgba(2,26,53,.55), transparent); pointer-events: none; z-index: 1; }
+    .hero-content > * { opacity: 0; animation: heroRise .9s var(--ease) forwards; }
+    .hero-content > *:nth-child(1) { animation-delay: .05s; }
+    .hero-content > *:nth-child(2) { animation-delay: .18s; }
+    .hero-content > *:nth-child(3) { animation-delay: .30s; }
+    .hero-content > *:nth-child(4) { animation-delay: .42s; }
+    .hero-content > *:nth-child(5) { animation-delay: .54s; }
+    @keyframes heroRise { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+    .hero-tag { display: inline-flex; align-items: center; gap: 10px; padding: 9px 22px; border-radius: 50px; background: rgba(243,112,33,.92); border: 1px solid rgba(255,255,255,.25); }
+    .hero-tag::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #fff; animation: dotPulse 1.8s infinite; }
+    @keyframes dotPulse { 0% { box-shadow: 0 0 0 0 rgba(255,255,255,.7); } 100% { box-shadow: 0 0 0 10px rgba(255,255,255,0); } }
+    .hero-title { letter-spacing: -2px; text-shadow: none; background: linear-gradient(180deg, #ffffff 35%, #ffd9bf 100%); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 8px 26px rgba(0,0,0,.45)); }
+    .hero-subtitle::after { content: ''; display: block; width: 84px; height: 4px; border-radius: 4px; background: var(--grad-orange); margin: 22px auto 0; }
+    .hero-projects { color: rgba(255,255,255,.88); }
+
+    /* ── Judul seksi ── */
+    .section-label { color: var(--lg-orange); background: rgba(243,112,33,.10); padding: 7px 18px; border-radius: 50px; font-size: 12px; letter-spacing: 2.4px; }
+    .section-title { letter-spacing: -.6px; }
+    .home-articles-header h2 { position: relative; padding-left: 18px; }
+    .home-articles-header h2::before { content: ''; position: absolute; left: 0; top: 4px; bottom: 4px; width: 6px; border-radius: 6px; background: var(--grad-orange); }
+    .home-articles-header a { transition: all .2s; }
+    .home-articles-header a:hover { letter-spacing: .5px; }
+
+    /* ── Kartu artikel / berita ── */
+    .news-card { border-radius: 20px; box-shadow: var(--shadow-sm); }
+    .news-card:hover { box-shadow: var(--shadow-lg); }
+    .news-img-wrap { overflow: hidden; }
+    .news-img-wrap img { transition: transform .7s var(--ease); }
+    .news-card:hover .news-img-wrap img { transform: scale(1.08); }
+    .news-img-wrap::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(2,26,53,.38), transparent 55%); pointer-events: none; z-index: 1; }
+    .badge-top-left, .badge-bottom-left { z-index: 2; }
+    .badge-top-left { box-shadow: 0 6px 16px rgba(0,0,0,.18); }
+    .news-title { letter-spacing: -.2px; }
+    .section-header-media { border-bottom: 2px solid var(--border); }
+
+    /* ── Tentang kami (beranda) ── */
+    .about-img { border-radius: 22px; box-shadow: 18px 18px 0 rgba(243,112,33,.16), var(--shadow-lg); }
+    .about-text p { color: #555; }
+
+    /* ── Statistik ── */
+    .stats-bar { background: radial-gradient(1100px 320px at 50% -60%, rgba(243,112,33,.28), transparent), var(--grad-navy); }
+    .stat-num { font-size: clamp(44px, 5vw, 64px); background: linear-gradient(180deg, #ffb27a, #F37021); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .stat-label { color: rgba(255,255,255,.85); }
+
+    /* ── Mitra (marquee) ── */
+    .partner-section h2 { position: relative; padding-bottom: 14px; letter-spacing: .5px; }
+    .partner-section h2::after { content: ''; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 60px; height: 4px; border-radius: 4px; background: var(--grad-orange); }
+    .marquee-item { padding: 0 14px; }
+    .marquee-item img { height: 68px; background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 8px 18px; box-shadow: var(--shadow-sm); }
+    .marquee-item img:hover { box-shadow: var(--shadow-md); }
+
+    /* ── Kategori produk (beranda) ── */
+    .group-card { border-radius: 20px; padding: 28px 18px 24px; position: relative; overflow: hidden; background: linear-gradient(180deg, #fff, #fafbfc); box-shadow: var(--shadow-sm); }
+    .group-card:hover { box-shadow: var(--shadow-lg); }
+    .group-card::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: var(--grad-orange); transform: scaleX(0); transition: transform .4s var(--ease); }
+    .group-card:hover::after { transform: scaleX(1); }
+    .group-card span::after { content: ' →'; display: inline-block; opacity: 0; transform: translateX(-6px); transition: all .3s; color: var(--lg-orange); }
+    .group-card:hover span::after { opacity: 1; transform: translateX(0); }
+
+    /* ── Warranty ── */
+    .warranty-box { background: linear-gradient(135deg, #04254A 0%, #0b3566 60%, #0e4285 100%); border-radius: 22px; box-shadow: var(--shadow-lg); position: relative; overflow: hidden; border: 1px solid rgba(255,255,255,.08); }
+    .warranty-box::before { content: ''; position: absolute; right: -70px; top: -70px; width: 240px; height: 240px; border-radius: 50%; background: radial-gradient(circle, rgba(243,112,33,.38), transparent 70%); pointer-events: none; }
+    .warranty-box > * { position: relative; z-index: 1; }
+    .warranty-icon-wrap { width: 88px; height: 88px; border-radius: 24px; background: rgba(243,112,33,.14); border: 1px solid rgba(243,112,33,.3); display: flex; align-items: center; justify-content: center; }
+    .warranty-list li { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.08); padding: 10px 14px; border-radius: 12px; transition: background .2s; }
+    .warranty-list li:hover { background: rgba(255,255,255,.12); }
+
+    /* ── Testimoni ── */
+    .testi-card { border-radius: 22px; position: relative; overflow: hidden; box-shadow: var(--shadow-sm); }
+    .testi-card::before { content: '\201C'; position: absolute; top: 4px; right: 22px; font-size: 96px; line-height: 1; font-family: Georgia, serif; font-weight: 900; color: rgba(243,112,33,.15); pointer-events: none; }
+    .testi-card:hover { box-shadow: var(--shadow-lg); }
+    .testi-text { font-style: normal; color: #333; }
+    .testi-avatar { border: 3px solid rgba(243,112,33,.25); }
+
+    /* ── Tentang kami (halaman) & tabel perbandingan ── */
+    .about-video { border-radius: 22px; box-shadow: var(--shadow-lg); }
+    .about-content-section .compare-table { border-radius: 18px; min-width: 640px; box-shadow: var(--shadow-md); }
+    .about-content-section .compare-table th { background: var(--grad-navy); letter-spacing: .5px; }
+    .about-content-section .compare-table tbody tr:nth-child(even) td:not(:first-child):not(.highlight-col) { background: #fafbfc; }
+    .about-content-section .compare-table tbody tr:hover td:not(:first-child) { background: rgba(243,112,33,.05); }
+    .about-content-section .compare-table .highlight-col { background: rgba(243,112,33,.07); }
+
+    /* ── Lokasi dealer & kontak ── */
+    .city-badge { transition: all .25s; box-shadow: var(--shadow-sm); }
+    .city-badge:not(.prov):hover { background: var(--grad-orange); color: #fff; border-color: transparent; transform: translateY(-3px); box-shadow: 0 10px 22px rgba(243,112,33,.30); }
+    .city-badge.prov { background: var(--grad-navy); }
+    .contact-form-card, .modern-form-card { border-radius: 22px; box-shadow: var(--shadow-lg); }
+    .contact-info-card { border-radius: 22px; background: linear-gradient(160deg, #04254A, #062f5e 60%, #0a3d78); }
+    .contact-map-full { border-radius: 22px; box-shadow: var(--shadow-md); }
+    .input-group input, .input-group textarea, .input-group select { border-radius: 12px; }
+    .modern-input-group input, .modern-input-group textarea { border: 2px solid #eef1f5; }
+
+    /* ── Karier ── */
+    .career-card { border-radius: 22px; position: relative; overflow: hidden; }
+    .career-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px; background: var(--grad-orange); }
+    .career-icon { width: 88px; height: 88px; }
+
+    /* ── Katalog ── */
+    .sidebar { border-radius: 18px; box-shadow: var(--shadow-sm); }
+    .filter-header { background: var(--grad-navy); }
+    .filter-btn { transition: all .2s; }
+    .filter-btn:hover { padding-left: 26px; color: var(--lg-orange); }
+    .category-group-title { position: relative; }
+    .category-group-title::after { content: ''; position: absolute; left: 0; bottom: -2px; width: 90px; height: 4px; border-radius: 4px; background: var(--grad-orange); }
+    .product-card { border-radius: 20px; padding: 26px; box-shadow: var(--shadow-sm); background: #fff; }
+    .product-card:hover { box-shadow: var(--shadow-lg); }
+    .product-img { height: 190px; }
+    .spec-item { border-left: 3px solid rgba(243,112,33,.35); padding-left: 12px; margin-bottom: 14px; }
+    .hot-badge { background: linear-gradient(135deg, #ff3b57, #E31837); border-radius: 50px; padding: 6px 13px; font-style: normal; letter-spacing: .5px; z-index: 2; }
+
+    /* ── Detail produk ── */
+    .detail-hero::before { background: linear-gradient(100deg, rgba(2,26,53,.94) 0%, rgba(4,37,74,.70) 60%, rgba(243,112,33,.25) 100%); }
+    .detail-hero-title h1 { font-size: clamp(36px, 6vw, 64px); letter-spacing: -1px; }
+    .detail-highlights { gap: 16px; }
+    .hl-item { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); padding: 14px 20px; border-radius: 16px; }
+    .hl-val { font-size: 24px; }
+    .detail-slider-wrapper { border-radius: 24px; box-shadow: var(--shadow-md); background: radial-gradient(circle at 50% 0%, #ffffff, #f4f7fb); }
+    .detail-specs-section { border-radius: 22px; box-shadow: var(--shadow-md); }
+    .spec-table-group h4 { background: linear-gradient(90deg, rgba(243,112,33,.08), var(--bg-gray)); }
+    .spec-list-item:nth-child(even) { background: #fafbfc; }
+    .spec-list-val { margin-left: 16px; }
+
+    /* ── Artikel ── */
+    .article-full-container { border-radius: 22px; box-shadow: var(--shadow-lg); }
+    .article-read-img { border-radius: 16px; }
+    .article-tag { transition: all .2s; }
+    .article-tag:hover { transform: translateY(-2px); }
+
+    /* ── Footer ── */
+    footer { background: linear-gradient(180deg, #03162d 0%, #021122 100%); position: relative; }
+    footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--lg-orange), var(--lg-navy-2), var(--lg-orange)); }
+    .footer-title { position: relative; padding-bottom: 14px; }
+    .footer-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 44px; height: 3px; border-radius: 3px; background: var(--grad-orange); }
+    .footer-links a:hover { padding-left: 8px; }
+
+    /* ── WhatsApp mengambang ── */
+    .float-wa { background: var(--grad-green); }
+    .float-wa::before { content: ''; position: absolute; inset: 0; border-radius: 50%; background: var(--green); animation: waPulse 2.2s infinite; z-index: -1; }
+    @keyframes waPulse { 0% { transform: scale(1); opacity: .55; } 100% { transform: scale(1.7); opacity: 0; } }
+
+    /* ── Animasi muncul saat scroll (progressive enhancement) ── */
+    @supports (animation-timeline: view()) {
+      .group-card, .product-card, .career-card, .stat-item, .news-grid .news-card, .warranty-box {
+        animation: revealUp linear backwards; animation-timeline: view(); animation-range: entry 0% entry 40%;
+      }
+    }
+    @keyframes revealUp { from { opacity: 0; transform: translateY(36px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ── Responsif tambahan ── */
+    @media (max-width: 1024px) {
+      .about-img { box-shadow: 10px 10px 0 rgba(243,112,33,.16), var(--shadow-md); }
+      .warranty-icon-wrap { margin: 0 auto; }
+    }
+    @media (max-width: 600px) {
+      #promoPopup { left: 12px; right: 92px; bottom: 16px; width: auto; padding: 18px 16px 16px; }
+      .promo-desc { font-size: 13px; margin-bottom: 12px; }
+      .nav-brand { padding-left: 16px; gap: 8px; }
+      .nav-brand img { height: 30px; }
+      .nav-brand-text { font-size: 17px; }
+      .nav-wa-btn { padding: 10px 12px; font-size: 0 !important; gap: 0; margin-right: 6px; }
+      .nav-wa-btn svg { width: 22px; height: 22px; }
+      .page-banner { height: 230px; }
+      .hero-breadcrumb { left: 16px; top: 14px; font-size: 12px; padding: 6px 12px; max-width: calc(100% - 32px); }
+      .hero-btns .btn-primary, .hero-btns .btn-wa-green { width: 100%; max-width: 340px; }
+      .home-articles-slider .news-card, .testi-card { flex: 0 0 86%; }
+      .contact-form-card, .modern-form-card, .contact-info-card { padding: 30px 20px; }
+      .detail-slider-wrapper { padding: 20px; }
+      .detail-specs-section { padding: 24px 14px; }
+      .spec-list-item { flex-wrap: wrap; gap: 4px; padding: 14px 10px; }
+      .spec-list-val { margin-left: 0; text-align: left; }
+      .article-full-container { padding: 32px 20px; top: -50px; }
+      .article-read-title { font-size: 28px; }
+      .article-read-body { font-size: 16px; line-height: 1.8; }
+      .article-read-body p { text-align: left; }
+      .footer-title::after { left: 50%; transform: translateX(-50%); }
+      .warranty-box { margin: 40px auto; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+      .marquee-track { animation: none !important; }
+    }
   </style>
 </head>
 <body>
 
   <div id="promoPopup">
-    <button class="promo-close" onclick="document.getElementById('promoPopup').style.display='none'">✕</button>
+    <button class="promo-close" aria-label="Tutup promo" onclick="document.getElementById('promoPopup').style.display='none'; try{sessionStorage.setItem('promoClosed','1')}catch(e){}">✕</button>
     <div class="promo-title">Promo Spesial Bulan Ini!</div>
     <div class="promo-desc">Dapatkan Free Service 4x, Free Sparepart 4x, Free Training Mekanik & Operator, Free GPS. Terbatas hanya untuk 5 orang pertama!</div>
     <a href="https://wa.me/6281235666327" target="_blank" class="promo-btn">Klaim Promo Sekarang</a>
